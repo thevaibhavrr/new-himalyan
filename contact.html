@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
     <head>
         <!--====== Required meta tags ======-->
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="">
+        <meta name="description" content="Contact Bharat Agro Oil - Premium edible oil manufacturer since 1978. Get in touch for distribution inquiries, bulk orders, or customer support.">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--====== Title ======-->
-        <title>Orgarium - Agriculture Farming HTML Template</title>
+        <title>Contact Us - Bharat Agro Oil | Premium Edible Oil Manufacturer</title>
         <!--====== Favicon Icon ======-->
         <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
         <!--====== FontAwesome css ======-->
@@ -28,6 +28,48 @@
         <link rel="stylesheet" href="assets/css/default.css">
         <!--====== Style css ======-->
         <link rel="stylesheet" href="assets/css/style.css">
+        <style>
+            .product-img-container {
+                position: relative;
+                overflow: hidden;
+                border-radius: 15px;
+                transition: transform 0.3s ease;
+            }
+            .product-img-container:hover {
+                transform: translateY(-5px);
+            }
+            .product-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(45deg, rgba(238, 206, 56, 0.9), rgba(238, 206, 56, 0.7));
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                border-radius: 15px;
+            }
+            .product-img-container:hover .product-overlay {
+                opacity: 1;
+            }
+            .product-overlay h5 {
+                color: white;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            .product-overlay p {
+                color: white;
+                font-size: 14px;
+                text-align: center;
+                margin: 0;
+            }
+        </style>
     </head>
     <body>
         <!--====== Start Preloader ======-->
@@ -43,12 +85,12 @@
             <div class="panel-overlay"></div>
             <div class="offcanvas-panel-inner">
                 <div class="panel-logo">
-                    <a href="index.html"><img src="assets/images/logo/new-logo.png" alt="Logo"></a>
+                    <a href="index.html"><img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo"></a>
                 </div>
                 <div class="about-us">
                     <h5 class="panel-widget-title">About Us</h5>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam alias quae cupiditate quas, neque eum magni impedit asperiores.
+                        Bharat Agro Oil has been a trusted name in edible oil manufacturing since 1978. We deliver purity, quality, and health in every drop of our premium oils.
                     </p>
                 </div>
                 <div class="contact-us">
@@ -56,17 +98,15 @@
                     <ul>
                         <li>
                             <i class="fal fa-map-marker-alt"></i>
-                            121 King St, Melbourne VIC 3000, Australia.
+                            Khasra No. 118 & 120, Sikeda Road Industrial Area, Modinagar 201204, Distt. GZB, UP
                         </li>
                         <li>
                             <i class="fal fa-envelope-open"></i>
-                            <a href="mailto:hello@barky.com"> hello@barky.com</a>
-                            <a href="mailto:info@barky.com">info@barky.com</a>
+                            <a href="mailto:bharatagrooil@yahoo.in"> bharatagrooil@yahoo.in</a>
                         </li>
                         <li>
                             <i class="fal fa-phone"></i>
-                            <a href="tel:(312)-895-9800">(312) 895-9800</a>
-                            <a href="tel:(312)-895-9888">(312) 895-9888</a>
+                            <a href="tel:+919219450111">+91 9219450111</a>
                         </li>
                     </ul>
                 </div>
@@ -74,7 +114,7 @@
             </div>
         </div><!--====== offcanvas-panel ======-->
         <!--====== Start Header Section ======-->
-                <header class="header-area">
+        <header class="header-area">
             <div class="header-top-bar top-bar-one dark-black-bg">
                 <div class="container-fluid">
                     <div class="row align-items-center">
@@ -168,11 +208,9 @@
                                                 <li><a href="blended-oils.html">Blended Oils</a></li>
                                             </ul>
                                         </li>
-                                        <!-- <li><a href="health-benefits.html">Health Benefits</a></li> -->
                                         <li><a href="recipes.html">Recipes</a></li>
-                                        <!-- <li><a href="quality-control.html">Quality Control</a></li> -->
                                         <li><a href="distribution.html">Distribution</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="contact.html" class="active">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -190,10 +228,11 @@
             </div>
         </header><!--====== End Header Section ======-->
         <!--====== Start Page-Banner Section ======-->
-        <section class="page-banner bg_cover p-r z-1" style="background-image: url(assets/images/bg/page-bg-2.jpg);">
+        <section class="page-banner bg_cover p-r z-1" style="background-image: url(assets/images/bg/contact-banner.jpg);">
             <div class="brand-card text-center">
-                <img src="assets/images/icon/wheat.png" alt="icon">
-                <h3>Orgarium</h3>
+                <img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo" style="max-width: 120px;">
+                <h3>Bharat Agro Oil</h3>
+                <p>Premium Edible Oils Since 1978</p>
             </div>
             <div class="container">
                 <div class="row">
@@ -210,74 +249,63 @@
             </div>
         </section><!--====== End Page-Banner Section ======-->
         <!--====== Start Contact Information section ======-->
-        <section class="contact-information-one p-r z-1 pt-215 pb-130">
-            <div class="information-img_one wow fadeInRight"><img src="assets/images/contact/img-1.jpg" alt="Imaged"></div>
+        
+        <!--====== End Contact Information section ======-->
+        <!--====== Start Map section ======-->
+        <section class="contact-page-map">
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3497.456789012345!2d77.56789012345678!3d28.87654321098765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c7a8a8a8a8a8a%3A0x8a8a8a8a8a8a8a8a!2sModinagar%2C%20Ghaziabad%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section><!--====== End Map section ======-->
+        <!--====== Start Product Showcase Section ======-->
+        <section class="product-showcase-section p-r z-1 pt-80 pb-80" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-9 col-lg-12">
-                        <div class="contact-two_information-box">
-                            <div class="section-title section-title-left mb-50 wow fadeInUp">
-                                <span class="sub-title">Get In Touch</span>
-                                <h2>We’re Ready to Help 
-                                    You! Need Any Foods or
-                                    Consultations ?</h2>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="information-item-two info-one mb-30 wow fadeInDown">
-                                        <div class="icon">
-                                            <i class="far fa-map-marker-alt"></i>
-                                        </div>
-                                        <div class="info">
-                                            <h5>Locations</h5>
-                                            <p>505 Main Street, 2nd 
-                                                Block, New York</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="information-item-two mb-30 info-two wow fadeInUp">
-                                        <div class="icon">
-                                            <i class="far fa-envelope-open-text"></i>
-                                        </div>
-                                        <div class="info">
-                                            <h5>Email Address</h5>
-                                            <p><a href="mailto:hotlinein@gmail.com">hotlinein@gmail.com</a></p>
-                                            <p><a href="mailto:www.info.net">www.info.net</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="information-item-two mb-30 info-three wow fadeInDown">
-                                        <div class="icon">
-                                            <i class="far fa-phone"></i>
-                                        </div>
-                                        <div class="info">
-                                            <h5>Phone Number</h5>
-                                            <p><a href="tel:+01234567899">+012 (345) 678 99</a></p>
-                                            <p><a href="tel:+0123456">+0123456</a></p>
-                                        </div>
-                                    </div>
+                    <div class="col-lg-12">
+                        <div class="section-title text-center mb-60 wow fadeInUp">
+                            <span class="sub-title">Our Products</span>
+                            <h2>Premium Quality Edible Oils</h2>
+                            <p>Explore our wide range of pure, natural, and healthy cooking oils</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-showcase-item mb-30 wow fadeInUp">
+                            <div class="product-img-container">
+                                <img src="https://c8.alamy.com/comp/2AK7099/sunflower-oil-cooking-oils-bottles-background-2AK7099.jpg" alt="Sunflower Oil" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="product-overlay">
+                                    <h5>Sunflower Oil</h5>
+                                    <p>Nutrient-rich cooking oil</p>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <p>Natus error sit voluptatem accusantium doloremque laudatium, totam rem 
-                                        aperiam eaque ipsa quae abllo inventore veritatis et quase</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-showcase-item mb-30 wow fadeInUp">
+                            <div class="product-img-container">
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/007/681/376/small/sesame-oil-poster-vector.jpg" alt="Sesame Oil" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="product-overlay">
+                                    <h5>Sesame Oil</h5>
+                                    <p>Traditional extraction methods</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-showcase-item mb-30 wow fadeInUp">
+                            <div class="product-img-container">
+                                <img src="https://5.imimg.com/data5/SELLER/Default/2023/5/308418319/CC/BQ/UC/62947621/100-pure-cold-pressed-white-sesame-seed-oil-500x500.jpg" alt="Mustard Oil" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="product-overlay">
+                                    <h5>Mustard Oil</h5>
+                                    <p>Pure cold-pressed</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--====== End Contact Information section ======-->
-        <!--====== Start Map section ======-->
-        <section class="contact-page-map">
-            <div class="map-box">
-                <iframe src="https://maps.google.com/maps?q=new%20york&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-            </div>
-        </section><!--====== End Map section ======-->
+        </section><!--====== End Product Showcase Section ======-->
         <!--====== Start Contact Section ======-->
         <section class="contact-three pb-70 wow fadeInUp">
             <div class="container">
@@ -285,26 +313,55 @@
                     <div class="col-xl-7 col-lg-10">
                         <div class="contact-three_content-box">
                             <div class="section-title section-title-left mb-60">
-                                <span class="sub-title">Get In Touch</span>
-                                <h2>Need Oragnic Foods!
-                                    Send Us Message</h2>
+                                <span class="sub-title">Send Us a Message</span>
+                                <h2>Interested in Our Premium Edible Oils? Get In Touch!</h2>
                             </div>
                             <div class="contact-form">
                                 <form id="contactForm" action="assets/php/form-process.php" name="contactForm" method="post">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form_group form-group">
+                                                <input type="text" class="form_control" placeholder="Full Name" id="name" name="name" required data-error="Please enter your name">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form_group form-group">
+                                                <input type="email" class="form_control" placeholder="Email Address" id="email" name="email" required data-error="Please enter your Email Address">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form_group form-group">
+                                                <input type="tel" class="form_control" placeholder="Phone Number" id="phone" name="phone" required>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form_group form-group">
+                                                <select class="form_control" id="inquiry_type" name="inquiry_type" required>
+                                                    <option value="">Select Inquiry Type</option>
+                                                    <option value="distribution">Distribution Inquiry</option>
+                                                    <option value="bulk_order">Bulk Order</option>
+                                                    <option value="product_info">Product Information</option>
+                                                    <option value="partnership">Business Partnership</option>
+                                                    <option value="other">Other</option>
+                                                </select>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="form_group form-group">
-                                        <input type="text" class="form_control" placeholder="Full Name" id="name" name="name" required data-error="Please enter your name">
+                                        <input type="text" class="form_control" placeholder="Company/Organization (if applicable)" id="company" name="company">
+                                    </div>
+                                    <div class="form_group form-group">
+                                        <textarea class="form_control" placeholder="Your Message or Business Inquiry" id="message" name="message" required data-error="Please enter your Message" rows="5"></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="form_group form-group">
-                                        <input type="email" class="form_control" placeholder="Email Address" id="email" name="email" required data-error="Please enter your Email Address">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                    <div class="form_group form-group">
-                                        <textarea class="form_control" placeholder="Write Message" id="message" name="message" required data-error="Please enter your Message"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                    <div class="form_group form-group">
-                                        <button type="submit" class="main-btn btn-yellow">Send Us Message</button>
+                                        <button type="submit" class="main-btn btn-yellow">Send Message</button>
                                         <div id="msgSubmit" class="hidden"></div>
                                     </div>
                                 </form>
@@ -315,50 +372,69 @@
             </div>
         </section>
         <!--====== End Contact Section ======-->
+        <!--====== Start Quick Contact Section ======-->
+        <section class="quick-contact-section yellow-bg pt-80 pb-80">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="quick-contact-content wow fadeInLeft">
+                            <h3>Looking for Immediate Assistance?</h3>
+                            <p>Call us directly for quick responses to your queries about our products, distribution, or partnerships.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="quick-contact-actions text-lg-right wow fadeInRight">
+                            <a href="tel:+919219450111" class="main-btn btn-dark mr-3">
+                                <i class="fas fa-phone"></i> Call Now
+                            </a>
+                            <a href="https://wa.me/919219450111" class="main-btn btn-success">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====== End Quick Contact Section ======-->
         <!--====== Start Partner Section ======-->
         <section class="partners-one p-r z-1 pt-50 pb-130">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-6">
+                    <div class="col-lg-8">
                         <div class="section-title text-center mb-30 wow fadeInUp">
-                            <h4>We Have More Then 1235+ Global Partners</h4>
+                            <h4>Available On Leading Platforms & Distribution Networks</h4>
                         </div>
                     </div>
                 </div>
                 <div class="partner-slider-one wow fadeInDown">
                     <div class="partner-item-two">
                         <div class="partner-img">
-                            <img src="assets/images/partner/img-7.png" alt="partner image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnRUKDNec7DyjZ0vusRZIwpYfR6PrfZAAeRw&s" alt="Amazon" style="max-height: 60px; width: auto;">
                         </div>
                     </div>
                     <div class="partner-item-two">
                         <div class="partner-img">
-                            <img src="assets/images/partner/img-8.png" alt="partner image">
+                            <img src="https://cdn.couponlap.in/coupons/JioMart-.jpg1709530100074" alt="JioMart" style="max-height: 60px; width: auto;">
                         </div>
                     </div>
                     <div class="partner-item-two">
                         <div class="partner-img">
-                            <img src="assets/images/partner/img-9.png" alt="partner image">
+                            <img src="https://play-lh.googleusercontent.com/kXJYGrvy4pvHwzw6tMgf-KPthnPDg4RvvoOTgffwSuHCUL63WVxaj3ojX3ADBS0UiD0=s256-rw" alt="Blinkit" style="max-height: 60px; width: auto;">
                         </div>
                     </div>
                     <div class="partner-item-two">
                         <div class="partner-img">
-                            <img src="assets/images/partner/img-10.png" alt="partner image">
+                            <img src="https://download.logo.wine/logo/Metro_AG/Metro_AG-Logo.wine.png" alt="Metro Wholesale" style="max-height: 60px; width: auto;">
                         </div>
                     </div>
                     <div class="partner-item-two">
                         <div class="partner-img">
-                            <img src="assets/images/partner/img-11.png" alt="partner image">
+                            <img src="https://images.yourstory.com/cs/2/220356402d6d11e9aa979329348d4c3e/Flipkartimage1574850126217png?mode=crop&crop=faces&ar=2%3A1&format=auto&w=1920&q=75" alt="Flipkart" style="max-height: 60px; width: auto;">
                         </div>
                     </div>
                     <div class="partner-item-two">
                         <div class="partner-img">
-                            <img src="assets/images/partner/img-12.png" alt="partner image">
-                        </div>
-                    </div>
-                    <div class="partner-item-two">
-                        <div class="partner-img">
-                            <img src="assets/images/partner/img-10.png" alt="partner image">
+                            <img src="https://m.media-amazon.com/images/I/51xiX8CIWOL._UF350,350_QL80_.jpg" alt="Grofers" style="max-height: 60px; width: auto;">
                         </div>
                     </div>
                 </div>
@@ -372,7 +448,7 @@
                         <div class="col-lg-4 col-md-12 footer-contact-item">
                             <div class="contact-info d-flex justify-content-center">
                                 <div class="site-logo text-center">
-                                    <a href="index.html" class="brand-logo"><img src="assets/images/logo/new-logo.png" alt="Footer Logo"></a>
+                                    <a href="index.html" class="brand-logo"><img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo"></a>
                                 </div>
                             </div>
                         </div>
@@ -382,19 +458,19 @@
                                     <i class="flaticon-placeholder"></i>
                                 </div>
                                 <div class="text">
-                                    <h5>Locations</h5>
-                                    <h6>55 Main Street, New York</h6>
+                                    <h5>Our Factory</h5>
+                                    <h6>Modinagar, Ghaziabad, UP</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 footer-contact-item">
                             <div class="contact-info d-flex">
                                 <div class="icon">
-                                    <i class="flaticon-placeholder"></i>
+                                    <i class="flaticon-email"></i>
                                 </div>
                                 <div class="text">
                                     <h5>Email Us</h5>
-                                    <h6><a href="mailto:hotlineinfo@gmial.com">hotlineinfo@gmial.com</a></h6>
+                                    <h6><a href="mailto:bharatagrooil@yahoo.in">bharatagrooil@yahoo.in</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -404,16 +480,15 @@
                     <div class="row">
                         <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
                             <div class="footer-widget about-widget mb-40 wow fadeInDown">
-                                <h4 class="widget-title">About Us</h4>
+                                <h4 class="widget-title">About Bharat Agro Oil</h4>
                                 <div class="footer-about-content">
-                                    <p>Sit amet consectetur adipiscing
-                                        elit sed do eiusmo tempor incidunt ut labore et dolore magna aliquae. Quis ipsum suspendisse ultrices gravida commodo viverra</p>
+                                    <p>Since 1978, we have been dedicated to delivering purity, quality, and health in every drop. We strive to bring premium-grade edible oils to households, hotels, and businesses across India.</p>
                                     <div class="social-box">
-                                        <h4 class="mb-15">Follow On</h4>
+                                        <h4 class="mb-15">Follow Us</h4>
                                         <ul class="social-link">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="https://www.facebook.com/bharatagrooil" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="https://www.instagram.com/bharatagrooil/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                                             <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                                         </ul>
                                     </div>
@@ -422,48 +497,44 @@
                         </div>
                         <div class="col-lg-4 col-lg-4 col-md-7 col-sm-12">
                             <div class="footer-widget footer-nav-widget mb-40 wow fadeInUp">
-                                <h4 class="widget-title">Services</h4>
+                                <h4 class="widget-title">Quick Links</h4>
                                 <div class="footer-widget-nav">
                                     <ul>
-                                        <li><a href="#">Agriculture Foods</a></li>
-                                        <li><a href="#">Organic Vegetables</a></li>
-                                        <li><a href="#">Pond & Sea Fish</a></li>
-                                        <li><a href="#">Cow Milk & Meat</a></li>
-                                        <li><a href="#">Modern Equipment</a></li>
-                                        <li><a href="#">Natural Wheats</a></li>
-                                        <li><a href="#">Eggs & Meat</a></li>
+                                        <li><a href="mustard-oil.html">Mustard Oil</a></li>
+                                        <li><a href="soybean-oil.html">Soybean Oil</a></li>
+                                        <li><a href="sunflower-oil.html">Sunflower Oil</a></li>
+                                        <li><a href="groundnut-oil.html">Groundnut Oil</a></li>
+                                        <li><a href="blended-oils.html">Blended Oils</a></li>
+                                        <li><a href="recipes.html">Recipes</a></li>
                                     </ul>
                                     <ul>
-                                        <li><a href="#">Company History</a></li>
-                                        <li><a href="#">Latest News</a></li>
-                                        <li><a href="#">Needs a Career ?</a></li>
-                                        <li><a href="#">Meet The Team</a></li>
-                                        <li><a href="#">Setting & Privacy</a></li>
-                                        <li><a href="#">My Account</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="distribution.html">Distribution</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="distribution.html">Become Distributor</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Terms & Conditions</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-lg-4 col-md-6 col-sm-12">
                             <div class="footer-widget recent-post-widget mb-40 wow fadeInDown">
-                                <h4 class="widget-title">Recent News</h4>
-                                <ul class="post-widget-wrap">
-                                    <li class="post-item">
-                                        <img src="assets/images/widget/news-1.jpg" alt="Post Image">
-                                        <div class="post-title-date">
-                                            <h3 class="title"><a href="blog-details.html">Designing Better Links Websites & Emails</a></h3>
-                                            <span class="posted-on"><i class="fas fa-calendar-alt"></i><a href="#">25 March 2022</a></span>
-                                        </div>
-                                    </li>
-                                    <li class="post-item">
-                                        <img src="assets/images/widget/news-2.jpg" alt="Post Image">
-                                        <div class="post-title-date">
-                                            <h3 class="title"><a href="blog-details.html">Advent Calendars For Web Designers</a></h3>
-                                            <span class="posted-on"><i class="fas fa-calendar-alt"></i><a href="#">25 March 2022</a></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <a href="blog-standard.html" class="more-btn">View More News</a>
+                                <h4 class="widget-title">Distribution Areas</h4>
+                                <div class="distribution-areas">
+                                    <h5>We Serve In:</h5>
+                                    <ul>
+                                        <li>Uttar Pradesh</li>
+                                        <li>Bihar</li>
+                                        <li>Delhi</li>
+                                        <li>Haryana</li>
+                                        <li>Online Pan India</li>
+                                    </ul>
+                                    <div class="certification mt-3">
+                                        <h5>Certifications:</h5>
+                                        <p>FSSAI License: 10017051002014</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -472,8 +543,7 @@
                     <div class="row">
                         <div class="col-xl-3">
                             <div class="footer-text">
-                                <h5>Subscrive Our Newsletter
-                                    To Get More Updates</h5>
+                                <h5>Subscribe for Updates & Offers</h5>
                             </div>
                         </div>
                         <div class="col-xl-9">
@@ -487,12 +557,12 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form_group">
-                                                <input type="text" class="form_control" placeholder="Phone" name="phone" required>
+                                                <input type="text" class="form_control" placeholder="Phone Number" name="phone" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form_group">
-                                                <button class="main-btn btn-yellow">Subscribe Now</button>
+                                                <button class="main-btn btn-yellow">Subscribe</button>
                                             </div>
                                         </div>
                                     </div>
@@ -504,7 +574,7 @@
                 <div class="footer-copyright">
                     <div class="col-lg-12">
                         <div class="copyright-text text-center">
-                            <p>&copy; 2022 Orgrarium. All Rights Reserved</p>
+                            <p>&copy; 2024 Bharat Agro Oil. All Rights Reserved | Since 1978</p>
                         </div>
                     </div>
                 </div>

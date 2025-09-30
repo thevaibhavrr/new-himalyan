@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
     <head>
         <!--====== Required meta tags ======-->
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="">
+        <meta name="description" content="Bharat Agro Oil - Premium quality edible oils manufacturer since 1978. Learn about our history, mission, and quality standards.">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--====== Title ======-->
-        <title>Orgarium - Agriculture Farming HTML Template</title>
+        <title>About Us - Bharat Agro Oil | Premium Edible Oil Manufacturer Since 1978</title>
         <!--====== Favicon Icon ======-->
         <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
         <!--====== FontAwesome css ======-->
@@ -28,6 +28,212 @@
         <link rel="stylesheet" href="assets/css/default.css">
         <!--====== Style css ======-->
         <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .gallery-img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(238, 206, 56, 0.9), rgba(238, 206, 56, 0.7));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 10px;
+        }
+        .gallery-img:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-content {
+            text-align: center;
+            color: white;
+        }
+        .gallery-content h5 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .gallery-content p {
+            font-size: 14px;
+            margin: 0;
+        }
+        .image-gallery-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .process-item {
+            transition: transform 0.3s ease;
+        }
+        .process-item:hover {
+            transform: translateY(-10px);
+        }
+        .team-item {
+            transition: transform 0.3s ease;
+        }
+        .team-item:hover {
+            transform: translateY(-10px);
+        }
+        .process-content h5, .team-content h5 {
+            color: #333;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .process-content p, .team-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .facility-item {
+            transition: transform 0.3s ease;
+        }
+        .facility-item:hover {
+            transform: translateY(-5px);
+        }
+        .facility-content h4 {
+            color: #333;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .facility-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .home-image-item {
+            transition: transform 0.3s ease;
+        }
+        .home-image-item:hover {
+            transform: translateY(-5px);
+        }
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(238, 206, 56, 0.9), rgba(238, 206, 56, 0.7));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 15px;
+        }
+        .image-container:hover .image-overlay {
+            opacity: 1;
+        }
+        .image-overlay h5 {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .image-overlay p {
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            margin: 0;
+        }
+        .about-feature-img {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .about-feature-img:hover {
+            transform: translateY(-5px);
+        }
+        .img-caption {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .img-caption h6 {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .img-caption p {
+            color: #666;
+            font-size: 12px;
+            margin: 0;
+        }
+        .product-img-container, .team-img-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        .product-img-container:hover, .team-img-container:hover {
+            transform: translateY(-5px);
+        }
+        .product-overlay, .team-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(238, 206, 56, 0.9), rgba(238, 206, 56, 0.7));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 15px;
+        }
+        .product-img-container:hover .product-overlay,
+        .team-img-container:hover .team-overlay {
+            opacity: 1;
+        }
+        .product-overlay h6, .team-overlay h6 {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .product-overlay p, .team-overlay p {
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            margin: 0;
+        }
+        .brand-card {
+            background: rgba(255,255,255,0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .experience-box {
+            background: #eece38;
+            color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
     </head>
     <body>
         <!--====== Start Preloader ======-->
@@ -43,12 +249,12 @@
             <div class="panel-overlay"></div>
             <div class="offcanvas-panel-inner">
                 <div class="panel-logo">
-                    <a href="index.html"><img src="assets/images/logo/new-logo.png" alt="Logo"></a>
+                    <a href="index.html"><img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo"></a>
                 </div>
                 <div class="about-us">
                     <h5 class="panel-widget-title">About Us</h5>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam alias quae cupiditate quas, neque eum magni impedit asperiores.
+                        Bharat Agro Oil has been a trusted name in edible oil manufacturing since 1978. We deliver purity, quality, and health in every drop of our premium oils.
                     </p>
                 </div>
                 <div class="contact-us">
@@ -56,17 +262,15 @@
                     <ul>
                         <li>
                             <i class="fal fa-map-marker-alt"></i>
-                            121 King St, Melbourne VIC 3000, Australia.
+                            Khasra No. 118 & 120, Sikeda Road Industrial Area, Modinagar 201204, Distt. GZB, UP
                         </li>
                         <li>
                             <i class="fal fa-envelope-open"></i>
-                            <a href="mailto:hello@barky.com"> hello@barky.com</a>
-                            <a href="mailto:info@barky.com">info@barky.com</a>
+                            <a href="mailto:bharatagrooil@yahoo.in"> bharatagrooil@yahoo.in</a>
                         </li>
                         <li>
                             <i class="fal fa-phone"></i>
-                            <a href="tel:(312)-895-9800">(312) 895-9800</a>
-                            <a href="tel:(312)-895-9888">(312) 895-9888</a>
+                            <a href="tel:+919219450111">+91 9219450111</a>
                         </li>
                     </ul>
                 </div>
@@ -74,7 +278,7 @@
             </div>
         </div><!--====== offcanvas-panel ======-->
         <!--====== Start Header Section ======-->
-                <header class="header-area">
+        <header class="header-area">
             <div class="header-top-bar top-bar-one dark-black-bg">
                 <div class="container-fluid">
                     <div class="row align-items-center">
@@ -158,7 +362,7 @@
                                 <nav class="main-menu">
                                     <ul>
                                         <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="about.html" class="active">About Us</a></li>
                                         <li class="menu-item has-children"><a href="#">Our Products</a>
                                             <ul class="sub-menu">
                                                 <li><a href="mustard-oil.html">Mustard Oil</a></li>
@@ -168,14 +372,12 @@
                                                 <li><a href="blended-oils.html">Blended Oils</a></li>
                                             </ul>
                                         </li>
-                                        <!-- <li><a href="health-benefits.html">Health Benefits</a></li> -->
                                         <li><a href="recipes.html">Recipes</a></li>
-                                        <!-- <li><a href="quality-control.html">Quality Control</a></li> -->
                                         <li><a href="distribution.html">Distribution</a></li>
                                         <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </nav>
-                            </div>
+                                </div>
                             <!--=== Nav Right Item ===-->
                             <div class="nav-right-item">
                                 <div class="navbar-toggler">
@@ -190,10 +392,11 @@
             </div>
         </header><!--====== End Header Section ======-->
         <!--====== Start Page-Banner Section ======-->
-        <section class="page-banner bg_cover position-relative z-1" style="background-image: url(assets/images/bg/page-bg-1.jpg);">
+        <section class="page-banner bg_cover position-relative z-1" style="background-image: url('https://kingsedibleoils.com/images/banner.webp'); background-size: cover; background-position: center;">
             <div class="brand-card text-center">
-                <img src="assets/images/icon/wheat.png" alt="icon">
-                <h3>Orgarium</h3>
+                <img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo" style="max-width: 120px;">
+                <h3>Bharat Agro Oil</h3>
+                <p>Premium Edible Oils Since 1978</p>
             </div>
             <div class="container">
                 <div class="row">
@@ -216,41 +419,515 @@
                     <div class="col-lg-6">
                         <div class="about-content-box content-box-gap mb-50">
                             <div class="section-title section-title-left wow fadeInUp mb-30">
-                                <span class="sub-title">About Us</span>
-                                <h2>We’re Best Agriculture
-                                    & Organic Firms</h2>
+                                <span class="sub-title">Our Legacy</span>
+                                <h2>India's Trusted Edible Oil Manufacturer Since 1978</h2>
                             </div>
-                            <p>Natus error sit voluptatem accusantium doloremque laudatium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt</p>
+                            <p>For over four decades, Bharat Agro Oil has been a pioneer in the edible oil industry, dedicated to delivering purity, quality, and health in every drop. We are committed to providing premium quality, pure, and healthy edible oils to Indian families through our traditional extraction methods combined with modern technology.</p>
+                            
+                            <!-- Additional Images for About Section -->
+                            <div class="about-images-row mb-40 wow fadeInUp">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="about-feature-img mb-20">
+                                            <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Traditional Oil Extraction" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                                            <div class="img-caption">
+                                                <h6>Traditional Kolhu Process</h6>
+                                                <p>Time-tested extraction methods</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="about-feature-img mb-20">
+                                            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Quality Control" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                                            <div class="img-caption">
+                                                <h6>Quality Assurance</h6>
+                                                <p>Rigorous testing standards</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <div class="choose-item-list wow fadeInDown">
                                 <div class="single-choose-item mb-30">
+                                    <div class="icon">
+                                        <i class="flaticon-tractor"></i>
+                                    </div>
                                     <div class="text">
-                                        <h5>100% Natural Foods</h5>
-                                        <p>Accusantium doloremque laudatium, totam rem aperiam
-                                            inventore veritatis et quasi architecto beatae </p>
+                                        <h5>Traditional Kolhu Extraction</h5>
+                                        <p>Using traditional methods combined with modern technology to ensure maximum purity and nutritional value.</p>
                                     </div>
                                 </div>
                                 <div class="single-choose-item mb-30">
+                                    <div class="icon">
+                                        <i class="flaticon-agriculture"></i>
+                                    </div>
                                     <div class="text">
-                                        <h5>Modern Euipments</h5>
-                                        <p>Accusantium doloremque laudatium, totam rem aperiam
-                                            inventore veritatis et quasi architecto beatae </p>
+                                        <h5>Natural Filtration Process</h5>
+                                        <p>No chemical refining - our oils are naturally filtered to preserve their natural goodness and health benefits.</p>
+                                    </div>
+                                </div>
+                                <div class="single-choose-item mb-30">
+                                    <div class="icon">
+                                        <i class="flaticon-quality"></i>
+                            </div>
+                                    <div class="text">
+                                        <h5>Quality Certified</h5>
+                                        <p>FSSAI certified with highest quality standards and rigorous quality control in every batch.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="about-button wow fadeInUp">
-                                <a href="about.html" class="main-btn btn-yellow">Learn More Us</a>
+                            
+                            <div class="experience-box wow fadeInUp">
+                                <div class="row">
+                                    <div class="col-4 text-center">
+                                        <h2>46+</h2>
+                                        <p>Years Experience</p>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <h2>2000</h2>
+                                        <p>MT Monthly Capacity</p>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <h2>500+</h2>
+                                        <p>Happy Distributors</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="about-four_image-box text-right p-r mb-50 wow fadeInRight">
-                            <img src="assets/images/about/4.jpg" class="about-img_one" alt="">
-                            <img src="assets/images/about/5.jpg" class="about-img_two" alt="">
+                            <img src="https://d3jbu7vaxvlagf.cloudfront.net/small/v2/category_media/basic_img_16794890453346.jpg" class="about-img_one" alt="Our Manufacturing Facility" style="max-width: 100%; height: auto; border-radius: 10px;">
+                            <div class="about-img_two" style="position: absolute; bottom: -30px; left: -30px; width: 300px; height: 200px; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                                <img src="https://d3jbu7vaxvlagf.cloudfront.net/v2/category_media/daily_thumb_img_16812897916180.jpg?Expires=1767292200&Signature=etj3U-ZSArKKODTc31zIqIs~QPOEvq-tYM2EpR4jCS~bhrcdkr188TWLFZv~zMiM0gYA9t7BCBssYdU8pBEAGHbmRb4Df3PAkXy1HBDYcpAnwyBl2AxnkuB4n-yYRq3ihGPSVp1SNr6skW8Cwv67iPCutwFsRmjway5Gi9HOI6XTDRoLxoKzhO8SH22VCFz4XOndXPwOF6PWs9-6JzzyXsfoshNScaG00t4B0r96ax3Rinrmtt6JAq8tRL4t-YCWfclYsWsnCOHrXBkPIiObv8bKaXNS4Wff-U-qRyyVcfQ~Lihp38QMHaykuvwhn107JE6C8Dphpl3dg~1fQAYsfQ__&Key-Pair-Id=KY0B9P4EZXRDC" alt="Quality Control Process" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section><!--====== End About Section ======-->
+        <!--====== Start Mission Vision Section ======-->
+        <section class="features-section dark-black-bg pt-100 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="features-item text-center mb-30 wow fadeInUp">
+                            <div class="icon">
+                                <i class="flaticon-target"></i>
+                            </div>
+                            <div class="text">
+                                <h4>Our Mission</h4>
+                                <p>To produce and deliver superior-quality edible oils that meet the highest standards of purity, health, and safety. We aim to delight customers through excellent packaging, reliable service, and consistent commitment to their nutritional needs.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="features-item text-center mb-30 wow fadeInDown">
+                            <div class="icon">
+                                <i class="flaticon-vision"></i>
+                                    </div>
+                                    <div class="text">
+                                <h4>Our Vision</h4>
+                                <p>To be a leading edible oil brand recognized globally for quality, trust, and innovation. We aspire to set new benchmarks in customer satisfaction and health-focused products while continuously enhancing our processes, packaging, and services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="features-item text-center mb-30 wow fadeInUp">
+                            <div class="icon">
+                                <i class="flaticon-values"></i>
+                                    </div>
+                                    <div class="text">
+                                <h4>Our Values</h4>
+                                <p>Quality, Purity, Trust, and Innovation. We believe in maintaining traditional values while embracing modern technology to deliver the best products to our customers. Every decision we make is guided by our commitment to health and wellness.</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </section><!--====== End Mission Vision Section ======-->
+        <!--====== Start Image Gallery Section ======-->
+        <section class="image-gallery-section p-r z-1 pt-80 pb-80" style="background-color: #f8f9fa;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center mb-60 wow fadeInUp">
+                            <span class="sub-title">Our Products</span>
+                            <h2>Premium Quality Edible Oils</h2>
+                            <p>Explore our wide range of pure, natural, and healthy cooking oils</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Mustard Oil -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-gallery-item mb-30 wow fadeInUp">
+                            <div class="gallery-img">
+                                <a href="mustard-oil.html">
+                                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/5/308418319/CC/BQ/UC/62947621/100-pure-cold-pressed-white-sesame-seed-oil-500x500.jpg" alt="Mustard Oil" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-content">
+                                            <h5>Mustard Oil</h5>
+                                            <p>Pure cold-pressed mustard oil</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Soybean Oil -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-gallery-item mb-30 wow fadeInUp">
+                            <div class="gallery-img">
+                                <a href="soybean-oil.html">
+                                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/7/532500801/YE/YN/ED/43229989/sesame-seed-oil-500x500.jpeg" alt="Soybean Oil" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-content">
+                                            <h5>Soybean Oil</h5>
+                                            <p>Premium quality soybean oil</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sunflower Oil -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-gallery-item mb-30 wow fadeInUp">
+                            <div class="gallery-img">
+                                <a href="sunflower-oil.html">
+                                    <img src="https://c8.alamy.com/comp/2AK7099/sunflower-oil-cooking-oils-bottles-background-2AK7099.jpg" alt="Sunflower Oil" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-content">
+                                            <h5>Sunflower Oil</h5>
+                                            <p>Nutrient-rich cooking oil</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Groundnut Oil -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-gallery-item mb-30 wow fadeInUp">
+                            <div class="gallery-img">
+                                <a href="groundnut-oil.html">
+                                    <img src="https://static.vecteezy.com/system/resources/thumbnails/007/681/376/small/sesame-oil-poster-vector.jpg" alt="Groundnut Oil" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-content">
+                                            <h5>Groundnut Oil</h5>
+                                            <p>Pure groundnut oil for cooking</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Blended Oils -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-gallery-item mb-30 wow fadeInUp">
+                            <div class="gallery-img">
+                                <a href="blended-oils.html">
+                                    <img src="https://pansari.co.in/wp-content/uploads/2025/06/Cold-pressed-vs-refined-oils-Whats-better-1024x536.jpg" alt="Blended Oil" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-content">
+                                            <h5>Blended Oils</h5>
+                                            <p>Special blended oil combinations</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Health Benefits -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-gallery-item mb-30 wow fadeInUp">
+                            <div class="gallery-img">
+                                <a href="recipes.html">
+                                    <img src="https://m.media-amazon.com/images/I/81ZDJN2sMgL._UF350,350_QL80_.jpg" alt="Health Benefits" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-content">
+                                            <h5>Health Benefits</h5>
+                                            <p>Discover the health benefits of our oils</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Product Images -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-gallery-item mb-30 wow fadeInUp">
+                            <div class="gallery-img">
+                                <a href="products.html">
+                                    <img src="https://m.media-amazon.com/images/I/81Kvxhuu5qL._UF350,350_QL80_.jpg" alt="Premium Oil Collection" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-content">
+                                            <h5>Premium Collection</h5>
+                                            <p>High-quality oil varieties</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-gallery-item mb-30 wow fadeInUp">
+                            <div class="gallery-img">
+                                <a href="products.html">
+                                    <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/edible-oil/i/f/s/10-sunflower-oil-5-ltr-x-2-pack-pure-nutrient-rich-cooking-oil-original-imah9gsdz5tz7huf.jpeg?q=90" alt="Cooking Oil Pack" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-content">
+                                            <h5>Cooking Oil Pack</h5>
+                                            <p>Nutrient-rich cooking oil</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-gallery-item mb-30 wow fadeInUp">
+                            <div class="gallery-img">
+                                <a href="products.html">
+                                    <img src="https://m.media-amazon.com/images/I/41VcEW2gjlL._UF894,1000_QL80_.jpg" alt="Oil Bottles" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-content">
+                                            <h5>Oil Bottles</h5>
+                                            <p>Premium packaging design</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+        </section><!--====== End Image Gallery Section ======-->
+        <!--====== Start Additional Product Images Section ======-->
+        <section class="additional-products-section p-r z-1 pt-60 pb-60" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center mb-50 wow fadeInUp">
+                            <span class="sub-title">More Product Images</span>
+                            <h3>Dedicated Team Ensuring Quality</h3>
+                            <p>Our expert team works tirelessly to maintain the highest standards of quality and purity</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="product-image-item mb-30 wow fadeInUp">
+                            <div class="product-img-container">
+                                <img src="https://c8.alamy.com/comp/2AK7099/sunflower-oil-cooking-oils-bottles-background-2AK7099.jpg" alt="Oil Bottles Collection" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="product-overlay">
+                                    <h6>Oil Bottles Collection</h6>
+                                    <p>Premium packaging</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="product-image-item mb-30 wow fadeInUp">
+                            <div class="product-img-container">
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/007/681/376/small/sesame-oil-poster-vector.jpg" alt="Sesame Oil Production" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="product-overlay">
+                                    <h6>Sesame Oil Production</h6>
+                                    <p>Traditional methods</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="product-image-item mb-30 wow fadeInUp">
+                            <div class="product-img-container">
+                                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Quality Testing Lab" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="product-overlay">
+                                    <h6>Quality Testing Lab</h6>
+                                    <p>Scientific analysis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="product-image-item mb-30 wow fadeInUp">
+                            <div class="product-img-container">
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Manufacturing Facility" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="product-overlay">
+                                    <h6>Manufacturing Facility</h6>
+                                    <p>Modern equipment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Quality Assurance Images -->
+                <div class="row mt-40">
+                    <div class="col-lg-12">
+                        <h4 class="text-center mb-40 wow fadeInUp">Dedicated Team Ensuring Quality</h4>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="team-quality-item mb-30 wow fadeInUp">
+                            <div class="team-img-container">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Quality Manager" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="team-overlay">
+                                    <h6>Quality Manager</h6>
+                                    <p>Ensuring highest standards</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="team-quality-item mb-30 wow fadeInUp">
+                            <div class="team-img-container">
+                                <img src="https://media.istockphoto.com/id/640071044/photo/ill-find-the-cure.jpg?s=612x612&w=0&k=20&c=wJuZO-_-Yfs39KkEn4Ekd6fG8xqZi7DFcxuWHzflxR8=" alt="Lab Technician" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="team-overlay">
+                                    <h6>Lab Technician</h6>
+                                    <p>Testing every batch</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="team-quality-item mb-30 wow fadeInUp">
+                            <div class="team-img-container">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Production Supervisor" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="team-overlay">
+                                    <h6>Production Supervisor</h6>
+                                    <p>Overseeing manufacturing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--====== End Additional Product Images Section ======-->
+        <!--====== Start Manufacturing Process Section ======-->
+        <section class="manufacturing-process-section p-r z-1 pt-80 pb-80" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center mb-60 wow fadeInUp">
+                            <span class="sub-title">Our Process</span>
+                            <h2>From Seed to Oil - Our Manufacturing Journey</h2>
+                            <p>Discover how we transform premium seeds into pure, healthy cooking oils</p>
+                </div>
+                            </div>
+                            </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="process-item text-center mb-40 wow fadeInUp">
+                            <div class="process-img">
+                                <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Seed Selection" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        </div>
+                            <div class="process-content">
+                                <h5>Premium Seed Selection</h5>
+                                <p>Carefully selected high-quality seeds from trusted farmers</p>
+                    </div>
+                            </div>
+                            </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="process-item text-center mb-40 wow fadeInUp">
+                            <div class="process-img">
+                                <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Traditional Extraction" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        </div>
+                            <div class="process-content">
+                                <h5>Traditional Kolhu Extraction</h5>
+                                <p>Cold-pressed extraction using traditional methods</p>
+                    </div>
+                            </div>
+                            </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="process-item text-center mb-40 wow fadeInUp">
+                            <div class="process-img">
+                                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Quality Testing" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        </div>
+                            <div class="process-content">
+                                <h5>Quality Testing</h5>
+                                <p>Rigorous testing for purity and nutritional value</p>
+                    </div>
+                            </div>
+                            </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="process-item text-center mb-40 wow fadeInUp">
+                            <div class="process-img">
+                                <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Packaging" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        </div>
+                            <div class="process-content">
+                                <h5>Safe Packaging</h5>
+                                <p>Hygienic packaging to preserve freshness</p>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </section><!--====== End Manufacturing Process Section ======-->
+        <!--====== Start Team Section ======-->
+        <section class="team-section p-r z-1 pt-80 pb-80" style="background-color: #f8f9fa;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center mb-60 wow fadeInUp">
+                            <span class="sub-title">Our Team</span>
+                            <h2>Meet Our Expert Team</h2>
+                            <p>Dedicated professionals committed to quality and excellence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="team-item text-center mb-40 wow fadeInUp">
+                            <div class="team-img">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Team Member" style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        </div>
+                            <div class="team-content">
+                                <h5>Rajesh Kumar</h5>
+                                <p>Production Manager</p>
+                                <p>25+ years of experience in oil manufacturing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="team-item text-center mb-40 wow fadeInUp">
+                            <div class="team-img">
+                                <img src="https://media.istockphoto.com/id/640071044/photo/ill-find-the-cure.jpg?s=612x612&w=0&k=20&c=wJuZO-_-Yfs39KkEn4Ekd6fG8xqZi7DFcxuWHzflxR8=" alt="Team Member" style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        </div>
+                            <div class="team-content">
+                                <h5>Priya Sharma</h5>
+                                <p>Quality Control Head</p>
+                                <p>Ensuring highest quality standards</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="team-item text-center mb-40 wow fadeInUp">
+                            <div class="team-img">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Team Member" style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        </div>
+                            <div class="team-content">
+                                <h5>Amit Singh</h5>
+                                <p>Technical Director</p>
+                                <p>Innovation and process improvement</p>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                            </div>
+        </section><!--====== End Team Section ======-->
         <!--====== Start Why choose Section ======-->
         <section class="why-choose-two p-r z-1 pt-50 pb-90">
             <div class="container">
@@ -259,8 +936,29 @@
                         <div class="choose-two_content-box">
                             <div class="section-title section-title-left mb-40 wow fadeInLeft">
                                 <span class="sub-title">Why Choose Us</span>
-                                <h2>Very Much Professional 
-                                    Growing Company</h2>
+                                <h2>What Makes Bharat Agro Oil Different</h2>
+                        </div>
+                            <p class="wow fadeInUp">With 46+ years of experience and state-of-the-art manufacturing facilities, we combine traditional wisdom with modern technology to deliver the purest edible oils.</p>
+                            
+                            <div class="choose-item-list wow fadeInDown">
+                                <div class="single-choose-item mb-20">
+                                    <div class="text">
+                                        <h5><i class="fas fa-check-circle text-warning"></i> Traditional Kolhu Extraction</h5>
+                                        <p>Pure oil extraction using time-tested methods</p>
+                    </div>
+                        </div>
+                                <div class="single-choose-item mb-20">
+                                    <div class="text">
+                                        <h5><i class="fas fa-check-circle text-warning"></i> Natural Filtration</h5>
+                                        <p>No chemical refining - naturally filtered oils</p>
+                            </div>
+                        </div>
+                                <div class="single-choose-item mb-20">
+                                    <div class="text">
+                                        <h5><i class="fas fa-check-circle text-warning"></i> FSSAI Certified</h5>
+                                        <p>Highest quality standards and certifications</p>
+                    </div>
+                </div>
                             </div>
                         </div>
                     </div>
@@ -269,36 +967,36 @@
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="single-chart-item text-center mb-40 wow fadeInUp">
                                     <div class="chart-circle">
-                                        <div class="circle" data-donutty data-thickness='5' data-padding='0'  data-value='75' data-bg="rgba(255, 255, 255, 0.149)" data-round=false data-color="#eece38"></div>
-                                        <h2 class="number">75<span class="sign">%</span></h2>
+                                        <div class="circle" data-donutty data-thickness='5' data-padding='0'  data-value='100' data-bg="rgba(255, 255, 255, 0.149)" data-round=false data-color="#eece38"></div>
+                                        <h2 class="number">100<span class="sign">%</span></h2>
                                     </div>
                                     <div class="text">
-                                        <h5>Organic Foods 
-                                            Provides</h5>
+                                        <h5>Natural 
+                                            Filtration</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="single-chart-item text-center mb-40 wow fadeInDown">
                                     <div class="chart-circle">
-                                        <div class="circle" data-donutty data-thickness='5' data-padding='0'  data-value='86' data-bg="rgba(255, 255, 255, 0.149)" data-round=false data-color="#eece38"></div>
-                                        <h2 class="number">86<span class="sign">%</span></h2>
+                                        <div class="circle" data-donutty data-thickness='5' data-padding='0'  data-value='98' data-bg="rgba(255, 255, 255, 0.149)" data-round=false data-color="#eece38"></div>
+                                        <h2 class="number">98<span class="sign">%</span></h2>
                                     </div>
                                     <div class="text">
-                                        <h5>Reforming The 
-                                            Systems</h5>
+                                        <h5>Customer 
+                                            Satisfaction</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="single-chart-item text-center mb-40 wow fadeInUp">
                                     <div class="chart-circle">
-                                        <div class="circle" data-donutty data-thickness='5' data-padding='0'  data-value='53' data-bg="rgba(255, 255, 255, 0.149)" data-round=false data-color="#eece38"></div>
-                                        <h2 class="number">53<span class="sign">%</span></h2>
+                                        <div class="circle" data-donutty data-thickness='5' data-padding='0'  data-value='95' data-bg="rgba(255, 255, 255, 0.149)" data-round=false data-color="#eece38"></div>
+                                        <h2 class="number">95<span class="sign">%</span></h2>
                                     </div>
                                     <div class="text">
-                                        <h5>Eco Fridendly
-                                            Farming</h5>
+                                        <h5>Quality 
+                                            Standards</h5>
                                     </div>
                                 </div>
                             </div>
@@ -307,71 +1005,121 @@
                 </div>
             </div>
         </section><!--====== End Why choose Section ======-->
-        <!--====== Start Partners Section ======-->
-        <section class="partners-section">
-            <div class="container-1350">
-                <div class="partners-wrap-two yellow-bg pb-60 pt-50 p-r z-1">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-6">
-                            <div class="section-title text-center mb-30 wow fadeInUp">
-                                <h4>We Have More Then 1235+ Global Partners</h4>
+        <!--====== Start Facilities Showcase Section ======-->
+        <section class="facilities-showcase-section p-r z-1 pt-80 pb-80" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center mb-60 wow fadeInUp">
+                            <span class="sub-title">Our Facilities</span>
+                            <h2>State-of-the-Art Manufacturing Infrastructure</h2>
+                            <p>Modern facilities equipped with advanced technology for superior quality</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="facility-item mb-40 wow fadeInLeft">
+                            <div class="facility-img">
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Manufacturing Plant" style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+                            </div>
+                            <div class="facility-content">
+                                <h4>Modern Manufacturing Plant</h4>
+                                <p>Our 50,000 sq ft manufacturing facility is equipped with the latest machinery and technology to ensure consistent quality and efficiency.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="partner-slider-one wow fadeInDown">
-                        <div class="partner-item">
-                            <div class="partner-img">
-                                <img src="assets/images/partner/img-1.png" alt="partner image">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="facility-item mb-40 wow fadeInRight">
+                            <div class="facility-img">
+                                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Quality Lab" style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+                            </div>
+                            <div class="facility-content">
+                                <h4>Advanced Quality Laboratory</h4>
+                                <p>Our in-house laboratory conducts rigorous testing for purity, nutritional content, and safety standards to ensure every batch meets our high standards.</p>
                             </div>
                         </div>
-                        <div class="partner-item">
-                            <div class="partner-img">
-                                <img src="assets/images/partner/img-2.png" alt="partner image">
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="facility-item mb-40 wow fadeInLeft">
+                            <div class="facility-img">
+                                <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Storage Facility" style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+                            </div>
+                            <div class="facility-content">
+                                <h4>Climate-Controlled Storage</h4>
+                                <p>Temperature and humidity-controlled storage facilities ensure optimal conditions for seed storage and oil preservation.</p>
                             </div>
                         </div>
-                        <div class="partner-item">
-                            <div class="partner-img">
-                                <img src="assets/images/partner/img-3.png" alt="partner image">
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="facility-item mb-40 wow fadeInRight">
+                            <div class="facility-img">
+                                <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Packaging Unit" style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
                             </div>
-                        </div>
-                        <div class="partner-item">
-                            <div class="partner-img">
-                                <img src="assets/images/partner/img-4.png" alt="partner image">
-                            </div>
-                        </div>
-                        <div class="partner-item">
-                            <div class="partner-img">
-                                <img src="assets/images/partner/img-5.png" alt="partner image">
-                            </div>
-                        </div>
-                        <div class="partner-item">
-                            <div class="partner-img">
-                                <img src="assets/images/partner/img-6.png" alt="partner image">
-                            </div>
-                        </div>
-                        <div class="partner-item">
-                            <div class="partner-img">
-                                <img src="assets/images/partner/img-3.png" alt="partner image">
+                            <div class="facility-content">
+                                <h4>Automated Packaging Unit</h4>
+                                <p>Fully automated packaging lines ensure hygienic and efficient bottling of our premium oils in various sizes.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> <!--====== End Partners Section ======-->
-        <!--====== Start Farmers Section ======-->
-        <section class="farmers-team_two light-gray-bg pb-90">
+        </section><!--====== End Facilities Showcase Section ======-->
+        <!--====== Start Manufacturing Section ======-->
+        <section class="about-section p-r z-1 pt-80 pb-80 dark-black-bg text-white">
             <div class="container">
-                <div class="row align-items-end">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-four_image-box text-right p-r mb-50 wow fadeInLeft">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG04k2_Ax24DH2CLthfB7KI-itVDKTSmnIvUJg3ErCNJultoM291QkomygStnoGi2Oul8&usqp=CAU" alt="Our Manufacturing Facility" style="max-width: 100%; height: auto; border-radius: 10px;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content-box content-box-gap mb-50">
+                            <div class="section-title section-title-left mb-30 wow fadeInUp">
+                                <span class="sub-title">Our Facility</span>
+                                <h2>State-of-the-Art Manufacturing</h2>
+                            </div>
+                            <p class="wow fadeInDown">Located in Modinagar, Ghaziabad, our manufacturing plant spans across modern facilities with a production capacity of 2000 MT per month. We combine traditional extraction methods with advanced technology to ensure the highest quality standards.</p>
+                            
+                            <div class="facility-features wow fadeInUp">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="feature-item mb-3">
+                                            <i class="fas fa-industry text-warning"></i>
+                                            <strong>Production Capacity:</strong> 2000 MT/month
+                                        </div>
+                                        <div class="feature-item mb-3">
+                                            <i class="fas fa-cogs text-warning"></i>
+                                            <strong>Traditional Kolhu:</strong> Pure extraction
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="feature-item mb-3">
+                                            <i class="fas fa-filter text-warning"></i>
+                                            <strong>Natural Filtration:</strong> No chemical refining
+                                        </div>
+                                        <div class="feature-item mb-3">
+                                            <i class="fas fa-award text-warning"></i>
+                                            <strong>Certification:</strong> FSSAI Licensed
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--====== End Manufacturing Section ======-->
+
+        <!--====== Start Team Section ======-->
+        <section class="farmers-team_two light-gray-bg pb-90 pt-80">
+            <div class="container">
+                <div class="row">
                     <div class="col-lg-8">
                         <div class="section-title section-title-left mb-50 wow fadeInLeft">
-                            <span class="sub-title">Our Farmers</span>
-                            <h2>We Have Lot’s Of Experience 
-                                Team Members</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-button float-lg-right mb-60 wow fadeInRight">
-                            <a href="farmers.html" class="main-btn bordered-btn bordered-yellow">Become a Member</a>
+                            <span class="sub-title">Our Expertise</span>
+                            <h2>Dedicated Team Ensuring Quality</h2>
                         </div>
                     </div>
                 </div>
@@ -379,200 +1127,43 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="team-member_one text-center mb-40 wow fadeInUp">
                             <div class="member-img">
-                                <img src="assets/images/team/img-1.jpg" alt="">
+                                <img src="assets/images/team/quality-manager.jpg" alt="Quality Manager">
                             </div>
                             <div class="member-info">
-                                <h3 class="title"><a href="farmers.html">Dennis P. Russell</a></h3>
-                                <p class="position">Food Farmers</p>
-                                <ul class="social-link">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                </ul>
+                                <h3 class="title"><a href="#">Quality Control Team</a></h3>
+                                <p class="position">Ensuring Purity & Standards</p>
+                                <p>Dedicated professionals maintaining highest quality standards in every batch</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="team-member_one text-center mb-40 wow fadeInDown">
                             <div class="member-img">
-                                <img src="assets/images/team/img-2.jpg" alt="">
+                                <img src="assets/images/team/production-team.jpg" alt="Production Team">
                             </div>
                             <div class="member-info">
-                                <h3 class="title"><a href="farmers.html">David M. Hower</a></h3>
-                                <p class="position">General Manager</p>
-                                <ul class="social-link">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                </ul>
+                                <h3 class="title"><a href="#">Production Experts</a></h3>
+                                <p class="position">Traditional + Modern Methods</p>
+                                <p>Skilled team combining traditional knowledge with modern technology</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="team-member_one text-center mb-40 wow fadeInUp">
                             <div class="member-img">
-                                <img src="assets/images/team/img-3.jpg" alt="">
+                                <img src="assets/images/team/rd-team.jpg" alt="R&D Team">
                             </div>
                             <div class="member-info">
-                                <h3 class="title"><a href="farmers.html">Richard M. Howell</a></h3>
-                                <p class="position">Food Farmers</p>
-                                <ul class="social-link">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                </ul>
+                                <h3 class="title"><a href="#">R&D Department</a></h3>
+                                <p class="position">Innovation & Development</p>
+                                <p>Continuous research for better products and improved processes</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="team-member_one text-center mb-40 wow fadeInDown">
-                            <div class="member-img">
-                                <img src="assets/images/team/img-4.jpg" alt="">
                             </div>
-                            <div class="member-info">
-                                <h3 class="title"><a href="farmers.html">Keneth R. Williams</a></h3>
-                                <p class="position">Food Farmers</p>
-                                <ul class="social-link">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                </ul>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!--====== End Farmers Section ======-->
-        <!--====== Start Testimonial Section ======-->
-        <section class="testimonial-section pt-130">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-xl-6 col-lg-10">
-                        <div class="section-title text-center mb-60 wow fadeInUp">
-                            <span class="sub-title">Clients Feedback</span>
-                            <h2>What’s Our Clients Say About
-                                Our Organic Foods</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-slider-one">
-                    <div class="testimonial-item text-center wow fadeInDown">
-                        <div class="author-thumb">
-                            <img src="assets/images/testimonial/img-1.jpg" alt="author Image">
-                        </div>
-                        <div class="testimonial-content">
-                            <p>“Sit amet consectetu escing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravic darisus comoe” </p>
-                            <div class="quote"><i class="fas fa-quote-right"></i></div>
-                            <div class="author-title">
-                                <h4>Michael R. Jordan</h4>
-                                <p class="position">CEO & Founder</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center wow fadeInUp">
-                        <div class="author-thumb">
-                            <img src="assets/images/testimonial/img-2.jpg" alt="author Image">
-                        </div>
-                        <div class="testimonial-content">
-                            <p>“Sit amet consectetu escing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravic darisus comoe” </p>
-                            <div class="quote"><i class="fas fa-quote-right"></i></div>
-                            <div class="author-title">
-                                <h4>Nathan A. Caswell</h4>
-                                <p class="position">Senior Manager</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center wow fadeInDown">
-                        <div class="author-thumb">
-                            <img src="assets/images/testimonial/img-3.jpg" alt="author Image">
-                        </div>
-                        <div class="testimonial-content">
-                            <p>“Sit amet consectetu escing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravic darisus comoe” </p>
-                            <div class="quote"><i class="fas fa-quote-right"></i></div>
-                            <div class="author-title">
-                                <h4>Somalia D. Silva</h4>
-                                <p class="position">Business Manager</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center wow fadeInUp">
-                        <div class="author-thumb">
-                            <img src="assets/images/testimonial/img-4.jpg" alt="author Image">
-                        </div>
-                        <div class="testimonial-content">
-                            <p>“Sit amet consectetu escing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravic darisus comoe” </p>
-                            <div class="quote"><i class="fas fa-quote-right"></i></div>
-                            <div class="author-title">
-                                <h4>Michael D. Slaughter</h4>
-                                <p class="position">Web Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center wow fadeInDown">
-                        <div class="author-thumb">
-                            <img src="assets/images/testimonial/img-2.jpg" alt="author Image">
-                        </div>
-                        <div class="testimonial-content">
-                            <p>“Sit amet consectetu escing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravic darisus comoe” </p>
-                            <div class="quote"><i class="fas fa-quote-right"></i></div>
-                            <div class="author-title">
-                                <h4>Nathan A. Caswell</h4>
-                                <p class="position">Senior Manager</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!--====== End Testimonial Section ======-->
-        <!--====== Start Counter Section ======-->
-        <section class="fun-fact-one pt-30 pb-130">
-            <div class="big-text mb-75 wow fadeInUp"><h2>Statistics</h2></div>
-            <div class="container">
-                <div class="counter-wrap-one wow fadeInDown">
-                    <div class="counter-inner-box">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 col-sm-12 counter-item">
-                                <div class="counter-inner">
-                                    <div class="text">
-                                        <h2 class="number"><span class="count">3652</span>+</h2>
-                                        <p>Saticfied Clients</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 counter-item">
-                                <div class="counter-inner">
-                                    <div class="text">
-                                        <h2 class="number"><span class="count">896</span>+</h2>
-                                        <p>Modern Equipment</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 counter-item">
-                                <div class="counter-inner">
-                                    <div class="text">
-                                        <h2 class="number"><span class="count">945</span>+</h2>
-                                        <p>Expert Team Members</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 counter-item">
-                                <div class="counter-inner">
-                                    <div class="text">
-                                        <h2 class="number"><span class="count">565</span>+</h2>
-                                        <p>Tons of Harvest</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--====== End Counter Section ======-->
+        </section><!--====== End Team Section ======-->
+  
         <!--====== Start Footer ======-->
         <footer class="footer-default footer-white dark-black-bg">
             <div class="container">
@@ -581,7 +1172,7 @@
                         <div class="col-lg-4 col-md-12 footer-contact-item">
                             <div class="contact-info d-flex justify-content-center">
                                 <div class="site-logo text-center">
-                                    <a href="index.html" class="brand-logo"><img src="assets/images/logo/new-logo.png" alt="Footer Logo"></a>
+                                    <a href="index.html" class="brand-logo"><img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo"></a>
                                 </div>
                             </div>
                         </div>
@@ -591,19 +1182,19 @@
                                     <i class="flaticon-placeholder"></i>
                                 </div>
                                 <div class="text">
-                                    <h5>Locations</h5>
-                                    <h6>55 Main Street, New York</h6>
+                                    <h5>Our Factory</h5>
+                                    <h6>Modinagar, Ghaziabad, UP</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 footer-contact-item">
                             <div class="contact-info d-flex">
                                 <div class="icon">
-                                    <i class="flaticon-placeholder"></i>
+                                    <i class="flaticon-email"></i>
                                 </div>
                                 <div class="text">
                                     <h5>Email Us</h5>
-                                    <h6><a href="mailto:hotlineinfo@gmial.com">hotlineinfo@gmial.com</a></h6>
+                                    <h6><a href="mailto:bharatagrooil@yahoo.in">bharatagrooil@yahoo.in</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -613,16 +1204,15 @@
                     <div class="row">
                         <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
                             <div class="footer-widget about-widget mb-40 wow fadeInDown">
-                                <h4 class="widget-title">About Us</h4>
+                                <h4 class="widget-title">About Bharat Agro Oil</h4>
                                 <div class="footer-about-content">
-                                    <p>Sit amet consectetur adipiscing
-                                        elit sed do eiusmo tempor incidunt ut labore et dolore magna aliquae. Quis ipsum suspendisse ultrices gravida commodo viverra</p>
+                                    <p>Since 1978, we have been dedicated to delivering purity, quality, and health in every drop. We strive to bring premium-grade edible oils to households, hotels, and businesses across India.</p>
                                     <div class="social-box">
-                                        <h4 class="mb-15">Follow On</h4>
+                                        <h4 class="mb-15">Follow Us</h4>
                                         <ul class="social-link">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="https://www.facebook.com/bharatagrooil" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="https://www.instagram.com/bharatagrooil/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                                             <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                                         </ul>
                                     </div>
@@ -631,48 +1221,44 @@
                         </div>
                         <div class="col-lg-4 col-lg-4 col-md-7 col-sm-12">
                             <div class="footer-widget footer-nav-widget mb-40 wow fadeInUp">
-                                <h4 class="widget-title">Services</h4>
+                                <h4 class="widget-title">Quick Links</h4>
                                 <div class="footer-widget-nav">
                                     <ul>
-                                        <li><a href="#">Agriculture Foods</a></li>
-                                        <li><a href="#">Organic Vegetables</a></li>
-                                        <li><a href="#">Pond & Sea Fish</a></li>
-                                        <li><a href="#">Cow Milk & Meat</a></li>
-                                        <li><a href="#">Modern Equipment</a></li>
-                                        <li><a href="#">Natural Wheats</a></li>
-                                        <li><a href="#">Eggs & Meat</a></li>
+                                        <li><a href="mustard-oil.html">Mustard Oil</a></li>
+                                        <li><a href="soybean-oil.html">Soybean Oil</a></li>
+                                        <li><a href="sunflower-oil.html">Sunflower Oil</a></li>
+                                        <li><a href="groundnut-oil.html">Groundnut Oil</a></li>
+                                        <li><a href="blended-oils.html">Blended Oils</a></li>
+                                        <li><a href="recipes.html">Recipes</a></li>
                                     </ul>
                                     <ul>
-                                        <li><a href="#">Company History</a></li>
-                                        <li><a href="#">Latest News</a></li>
-                                        <li><a href="#">Needs a Career ?</a></li>
-                                        <li><a href="#">Meet The Team</a></li>
-                                        <li><a href="#">Setting & Privacy</a></li>
-                                        <li><a href="#">My Account</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="distribution.html">Distribution</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="distribution.html">Become Distributor</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Terms & Conditions</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-lg-4 col-md-6 col-sm-12">
                             <div class="footer-widget recent-post-widget mb-40 wow fadeInDown">
-                                <h4 class="widget-title">Recent News</h4>
-                                <ul class="post-widget-wrap">
-                                    <li class="post-item">
-                                        <img src="assets/images/widget/news-1.jpg" alt="Post Image">
-                                        <div class="post-title-date">
-                                            <h3 class="title"><a href="blog-details.html">Designing Better Links Websites & Emails</a></h3>
-                                            <span class="posted-on"><i class="fas fa-calendar-alt"></i><a href="#">25 March 2022</a></span>
+                                <h4 class="widget-title">Distribution Areas</h4>
+                                <div class="distribution-areas">
+                                    <h5>We Serve In:</h5>
+                                    <ul>
+                                        <li>Uttar Pradesh</li>
+                                        <li>Bihar</li>
+                                        <li>Delhi</li>
+                                        <li>Haryana</li>
+                                        <li>Online Pan India</li>
+                                    </ul>
+                                    <div class="certification mt-3">
+                                        <h5>Certifications:</h5>
+                                        <p>FSSAI License: 10017051002014</p>
                                         </div>
-                                    </li>
-                                    <li class="post-item">
-                                        <img src="assets/images/widget/news-2.jpg" alt="Post Image">
-                                        <div class="post-title-date">
-                                            <h3 class="title"><a href="blog-details.html">Advent Calendars For Web Designers</a></h3>
-                                            <span class="posted-on"><i class="fas fa-calendar-alt"></i><a href="#">25 March 2022</a></span>
                                         </div>
-                                    </li>
-                                </ul>
-                                <a href="blog-standard.html" class="more-btn">View More News</a>
                             </div>
                         </div>
                     </div>
@@ -681,8 +1267,7 @@
                     <div class="row">
                         <div class="col-xl-3">
                             <div class="footer-text">
-                                <h5>Subscrive Our Newsletter
-                                    To Get More Updates</h5>
+                                <h5>Subscribe for Updates & Offers</h5>
                             </div>
                         </div>
                         <div class="col-xl-9">
@@ -696,12 +1281,12 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form_group">
-                                                <input type="text" class="form_control" placeholder="Phone" name="phone" required>
+                                                <input type="text" class="form_control" placeholder="Phone Number" name="phone" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form_group">
-                                                <button class="main-btn btn-yellow">Subscribe Now</button>
+                                                <button class="main-btn btn-yellow">Subscribe</button>
                                             </div>
                                         </div>
                                     </div>
@@ -713,7 +1298,7 @@
                 <div class="footer-copyright">
                     <div class="col-lg-12">
                         <div class="copyright-text text-center">
-                            <p>&copy; 2022 Orgrarium. All Rights Reserved</p>
+                            <p>&copy; 2024 Bharat Agro Oil. All Rights Reserved | Since 1978</p>
                         </div>
                     </div>
                 </div>
