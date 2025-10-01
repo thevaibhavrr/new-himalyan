@@ -1,35 +1,242 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
     <head>
-        <!--====== Required meta tags ======-->
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!--====== Title ======-->
-        <title>Orgarium - Agriculture Farming HTML Template</title>
-        <!--====== Favicon Icon ======-->
-        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
-        <!--====== FontAwesome css ======-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Bharat Agro Oil | Premium Edible Oils</title>
         <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css">
-        <!--====== Flaticon css ======-->
         <link rel="stylesheet" href="assets/fonts/flaticon/flaticon.css">
-        <!--====== Bootstrap css ======-->
         <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-        <!--====== magnific-popup css ======-->
-        <link rel="stylesheet" href="assets/vendor/magnific-popup/dist/magnific-popup.css">
-        <!--====== Slick-popup css ======-->
-        <link rel="stylesheet" href="assets/vendor/slick/slick.css">
-        <!--====== Nice Select css ======-->
-        <link rel="stylesheet" href="assets/vendor/nice-select/css/nice-select.css">
-        <!--====== Jequery UI css ======-->
-        <link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.min.css">
-        <!--====== Animate css ======-->
-        <link rel="stylesheet" href="assets/vendor/animate.css">
-        <!--====== Default css ======-->
-        <link rel="stylesheet" href="assets/css/default.css">
-        <!--====== Style css ======-->
         <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+         .product-hero {
+             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://img.freepik.com/free-vector/rape-canola-horizontal-poster-with-oil-product-symbols-realistic-vector-illustration_1284-69310.jpg');
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+             color: white;
+             padding: 120px 0 80px;
+             text-align: center;
+         }
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 15px 15px 0 0;
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        .product-content {
+            padding: 25px;
+        }
+        .product-badge {
+            background: #eece38;
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .product-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .product-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+        }
+        .product-features li {
+            padding: 5px 0;
+            color: #666;
+            position: relative;
+            padding-left: 20px;
+        }
+        .product-features li:before {
+            content: "✓";
+            color: #eece38;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .product-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+        }
+        .product-size {
+            color: #666;
+            font-size: 14px;
+        }
+        .product-btn {
+            background: #eece38;
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        .product-btn:hover {
+            background: #d4b325;
+            color: #000;
+            transform: translateY(-2px);
+        }
+        .product-categories {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .category-filter {
+            background: #f8f9fa;
+            padding: 40px 0;
+        }
+        .filter-btn {
+            background: transparent;
+            border: 2px solid #eece38;
+            color: #333;
+            padding: 10px 25px;
+            border-radius: 25px;
+            margin: 0 5px 10px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: #eece38;
+            color: #000;
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #eece38;
+        }
+        .health-benefits {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        .benefit-card {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        .benefit-icon {
+            font-size: 40px;
+            color: #eece38;
+            margin-bottom: 20px;
+        }
+        .testimonial-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            height: 100%;
+        }
+        .manufacturing-process {
+            padding: 80px 0;
+        }
+        .process-step {
+            text-align: center;
+            padding: 30px;
+        }
+         .step-number {
+             width: 60px;
+             height: 60px;
+             background: #eece38;
+             color: #000;
+             border-radius: 50%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 24px;
+             font-weight: bold;
+             margin: 0 auto 20px;
+         }
+         .testimonial-content {
+             margin-bottom: 20px;
+         }
+         .testimonial-content p {
+             font-style: italic;
+             font-size: 16px;
+             line-height: 1.6;
+             margin: 0;
+         }
+         .testimonial-author {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+         }
+         .author-info h5 {
+             color: white;
+             font-size: 18px;
+             font-weight: 600;
+             margin-bottom: 5px;
+         }
+         .author-info span {
+             color: rgba(255,255,255,0.8);
+             font-size: 14px;
+         }
+         .rating {
+             color: #eece38;
+         }
+         .rating i {
+             margin-right: 2px;
+         }
+    </style>
     </head>
     <body>
         <!--====== Start Preloader ======-->
@@ -40,63 +247,30 @@
             </div>
         </div>
         <!--====== End Preloader ======-->
-        <!--====== offcanvas-panel ======-->
-        <div class="offcanvas-panel">
-            <div class="panel-overlay"></div>
-            <div class="offcanvas-panel-inner">
-                <div class="panel-logo">
-                    <a href="index.html"><img src="assets/images/logo/new-logo.png" alt="Logo"></a>
-                </div>
-                <div class="about-us">
-                    <h5 class="panel-widget-title">About Us</h5>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam alias quae cupiditate quas, neque eum magni impedit asperiores.
-                    </p>
-                </div>
-                <div class="contact-us">
-                    <h5 class="panel-widget-title">Contact Us</h5>
-                    <ul>
-                        <li>
-                            <i class="fal fa-map-marker-alt"></i>
-                            121 King St, Melbourne VIC 3000, Australia.
-                        </li>
-                        <li>
-                            <i class="fal fa-envelope-open"></i>
-                            <a href="mailto:hello@barky.com"> hello@barky.com</a>
-                            <a href="mailto:info@barky.com">info@barky.com</a>
-                        </li>
-                        <li>
-                            <i class="fal fa-phone"></i>
-                            <a href="tel:(312)-895-9800">(312) 895-9800</a>
-                            <a href="tel:(312)-895-9888">(312) 895-9888</a>
-                        </li>
-                    </ul>
-                </div>
-                <a href="#" class="panel-close"><i class="fal fa-times"></i></a>
-            </div>
-        </div><!--====== offcanvas-panel ======-->
+
         <!--====== Start Header Section ======-->
-                <header class="header-area">
+        <!--====== Start Header Section ======-->
+        <header class="header-area">
             <div class="header-top-bar top-bar-one dark-black-bg">
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-xl-6 col-lg-12 col-md-12 col-6">
                             <div class="top-bar-left d-flex align-items-center">
-                                <span class="text">Welcome to Bharat Agro Oil - Premium Edible Oils Since 1978</span>
+                             <span class="text">Welcome to Bharat Agro Oil - Premium Edible Oils Since 1978</span>
                                 <span class="lang-dropdown">
                                     <select class="wide">
                                         <option value="01">English</option>
-                                        <option value="02">Hindi</option>
+                                     <option value="02">Hindi</option>
                                     </select>
                                 </span>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-12 col-md-12 col-6">
                             <div class="top-bar-right">
-                                <span class="text"><i class="far fa-clock"></i>Opening Hours : Monday - Saturday, 08:00 am - 06:00pm</span>
+                             <span class="text"><i class="far fa-clock"></i>Opening Hours : Monday - Saturday, 08:00 am - 06:00pm</span>
                                 <ul class="social-link">
-                                    <li><a href="https://www.facebook.com/bharatagrooil" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="https://www.instagram.com/bharatagrooil/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                 <li><a href="https://www.facebook.com/bharatagrooil" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                 <li><a href="https://www.instagram.com/bharatagrooil/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
@@ -105,81 +279,69 @@
                     </div>
                 </div>
             </div>
-            <div class="header-middle">
-                <div class="container-1350">
-                    <div class="row align-items-center">
-                        <div class="col-xl-4 d-xl-block d-lg-none">
-                            <div class="site-branding d-lg-block d-none">
-                                <a href="index.html" class="brand-logo"><img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo"
-                                    style="max-width: 230px;"
-                                    ></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-12">
-                            <div class="contact-information">
-                                <div class="information-item_one d-flex">
-                                    <div class="icon">
-                                        <i class="flaticon-placeholder"></i>
-                                    </div>
-                                    <div class="info">
-                                        <h5 class="mb-1">Our Location</h5>
-                                        <p>Modinagar, Ghaziabad, UP</p>
-                                    </div>
-                                </div>
-                                <div class="information-item_one d-flex">
-                                    <div class="icon">
-                                        <i class="flaticon-email"></i>
-                                    </div>
-                                    <div class="info">
-                                        <h5 class="mb-1">Email Us</h5>
-                                        <p><a href="mailto:bharatagrooil@yahoo.in">bharatagrooil@yahoo.in</a></p>
-                                    </div>
-                                </div>
-                                <div class="button text-md-right text-sm-center">
-                                    <a href="contact.html" class="main-btn btn-yellow">Become a Distributor</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-navigation navigation-one">
+         <div class="header-middle">
+             <div class="container-1350">
+                 <div class="row align-items-center">
+                     <div class="col-xl-4 d-xl-block d-lg-none">
+                         <div class="site-branding d-lg-block d-none">
+                             <a href="index.html" class="brand-logo"><img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo" style="max-width: 230px;"></a>
+                         </div>
+                     </div>
+                     <div class="col-xl-8 col-lg-12">
+                         <div class="contact-information">
+                             <div class="information-item_one d-flex">
+                                 <div class="icon">
+                                     <i class="flaticon-placeholder"></i>
+                                 </div>
+                                 <div class="info">
+                                     <h5 class="mb-1">Our Location</h5>
+                                     <p>Modinagar, Ghaziabad, UP</p>
+                                 </div>
+                             </div>
+                             <div class="information-item_one d-flex">
+                                 <div class="icon">
+                                     <i class="flaticon-email"></i>
+                                 </div>
+                                 <div class="info">
+                                     <h5 class="mb-1">Email Us</h5>
+                                     <p><a href="mailto:bharatagrooil@yahoo.in">bharatagrooil@yahoo.in</a></p>
+                                 </div>
+                             </div>
+                             <div class="button text-md-right text-sm-center">
+                                 <a href="contact.html" class="main-btn btn-yellow">Become a Distributor</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="header-navigation navigation-one">
                 <div class="nav-overlay"></div>
-                <div class="container-1350">
+             <div class="container-1350">
                     <div class="primary-menu">
                         <div class="site-branding">
-                            <a href="index.html" class="brand-logo"><img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo"></a>
+                         <a href="index.html" class="brand-logo"><img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo"></a>
                         </div>
                         <div class="nav-inner-menu">
                             <div class="nav-menu">
                                 <!--=== Mobile Logo ===-->
                                 <div class="mobile-logo mb-30 d-block d-xl-none text-center">
-                                    <a href="index.html" class="brand-logo"><img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo"></a>
+                                 <a href="index.html" class="brand-logo"><img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo"></a>
                                 </div>
                                 <!--=== Main Menu ===-->
                                 <nav class="main-menu">
                                     <ul>
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li class="menu-item has-children"><a href="#">Our Products</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="mustard-oil.html">Mustard Oil</a></li>
-                                                <li><a href="soybean-oil.html">Soybean Oil</a></li>
-                                                <li><a href="sunflower-oil.html">Sunflower Oil</a></li>
-                                                <li><a href="groundnut-oil.html">Groundnut Oil</a></li>
-                                                <li><a href="blended-oils.html">Blended Oils</a></li>
-                                            </ul>
-                                        </li>
-                                        <!-- <li><a href="health-benefits.html">Health Benefits</a></li> -->
-                                        <li><a href="recipes.html">Recipes</a></li>
-                                        <!-- <li><a href="quality-control.html">Quality Control</a></li> -->
-                                        <li><a href="services.html">Service page</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                     <li><a href="index.html">Home</a></li>
+                                     <li><a href="about.html">About Us</a></li>
+                                     <li><a href="products.html">Our Products</a></li>
+                                     <li><a href="recipes.html">Recipes</a></li>
+                                     <li><a href="services.html" class="active">Service page</a></li>
+                                     <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </nav>
-                            </div>
-                            <!--=== Nav Right Item ===-->
-                            <div class="nav-right-item">
+                                </div>
+                         <!--=== Nav Right Item ===-->
+                         <div class="nav-right-item">
                                 <div class="navbar-toggler">
                                     <span></span>
                                     <span></span>
@@ -191,329 +353,393 @@
                 </div>
             </div>
         </header><!--====== End Header Section ======-->
-        <!--====== Start Page Banner Section ======-->
-        <section class="page-banner bg_cover position-relative z-1" style="background-image: url(assets/images/bg/page-bg-1.jpg);">
-            <div class="brand-card text-center">
-                <img src="assets/images/icon/wheat.png" alt="icon">
-                <h3>Orgarium</h3>
+
+    <!--====== Start Product Hero Section ======-->
+    <section class="product-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1 style="color: white;">Our Premium Edible Oils</h1>
+                    <p class="lead" style="color: white;">Discover our range of pure, natural, and healthy cooking oils crafted with traditional methods and modern technology</p>
+                    <a href="#products" class="main-btn btn-yellow">View Our Products</a>
             </div>
+                        </div>
+            </div>
+    </section>
+    <!--====== End Product Hero Section ======-->
+
+    <!--====== Start Category Filter Section ======-->
+    <section class="category-filter">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-10">
-                        <div class="page-title">
-                            <h1>Shop</h1>
-                            <ul class="breadcrumbs-link">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="active">Shop</li>
-                            </ul>
+                <div class="col-lg-12">
+                    <div class="product-categories">
+                        <button class="filter-btn active" data-filter="all">All Products</button>
+                        <button class="filter-btn" data-filter="mustard">Mustard Oil</button>
+                        <button class="filter-btn" data-filter="sunflower">Sunflower Oil</button>
+                        <button class="filter-btn" data-filter="soybean">Soybean Oil</button>
+                        <button class="filter-btn" data-filter="groundnut">Groundnut Oil</button>
+                        <button class="filter-btn" data-filter="blended">Blended Oils</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section><!--====== End Page Banner Section ======-->
-        <!--====== Start Shop Section ======-->
-        <section class="shaop-page pt-170 pb-70">
+    </section>
+    <!--====== End Category Filter Section ======-->
+
+    <!--====== Start Products Section ======-->
+    <section id="products" class="products-section pt-100 pb-100">
             <div class="container">
-                <div class="product-search-filter wow fadeInUp">
-                    <form>
-                        <div class="row align-items-center">
-                            <div class="col-lg-3">
-                                <div class="product-search mb-30">
-                                    <div class="form_group">
-                                        <input type="search" class="form_control" placeholder="Search" name="search">
-                                        <button class="search-btn"><i class="far fa-search"></i></button>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span class="sub-title">Premium Quality</span>
+                        <h2>Our Edible Oil Collection</h2>
+                        <p>Pure, natural oils for healthy cooking and better living</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-9">
-                                <div class="row justify-content-between align-items-center mb-15">
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="show-text mb-15">
-                                            <p>Showing 1 - 12 of 30 Results</p>
+            <div class="row" id="product-grid">
+                <!-- Product cards will go here - same as previous code -->
+                <!-- Mustard Oil Product -->
+                <div class="col-lg-4 col-md-6" data-category="mustard">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/products/mustard-oil-product.jpg" alt="Pure Mustard Oil">
+                                        </div>
+                        <div class="product-content">
+                            <span class="product-badge">Best Seller</span>
+                            <h3 class="product-title">Pure Mustard Oil</h3>
+                            <p>Traditional cold-pressed mustard oil with authentic flavor and aroma. Perfect for Indian cooking and traditional recipes.</p>
+                            <ul class="product-features">
+                                <li>Cold Pressed Extraction</li>
+                                <li>Rich in Monounsaturated Fats</li>
+                                <li>High Smoke Point</li>
+                                <li>Natural Preservative Properties</li>
+                                            </ul>
+                            <div class="product-meta">
+                                <div>
+                                    <div class="product-price">₹220</div>
+                                    <div class="product-size">1 Liter</div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-8 col-md-6">
-                                        <div class="filter-category mb-15">
-                                            <ul>
-                                                <li>
-                                                    <select class="wide">
-                                                        <option data-display="Sort by Newness">Sort by Newness</option>
-                                                        <option value="01">Price High To Low</option>
-                                                        <option value="02">Price Low To High</option>
-                                                    </select>
-                                                </li>
-                                                <li><a href="products.html"><i class="far fa-list"></i></a></li>
-                                                <li><a href="products.html"><i class="far fa-th"></i></a></li>
-                                            </ul>
+                            <a href="contact.html" class="product-btn">Inquire Now</a>
                                         </div>
                                     </div>
                                 </div>
+
+                 <!-- Sunflower Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="sunflower">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://c8.alamy.com/comp/2AK7099/sunflower-oil-cooking-oils-bottles-background-2AK7099.jpg" alt="Premium Sunflower Oil">
+                </div>
+                         <div class="product-content">
+                             <span class="product-badge">Popular</span>
+                             <h3 class="product-title">Premium Sunflower Oil</h3>
+                             <p>Light and versatile cooking oil perfect for all types of cooking. Rich in vitamin E and low in saturated fats.</p>
+                             <ul class="product-features">
+                                 <li>High in Vitamin E</li>
+                                 <li>Low Saturated Fat</li>
+                                 <li>Neutral Flavor</li>
+                                 <li>High Smoke Point</li>
+                                            </ul>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹180</div>
+                                     <div class="product-size">1 Liter</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
                             </div>
                         </div>
-                    </form>
                 </div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="products-wrapper">
-                            <div class="row">
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="single-product-item mb-60 wow fadeInUp">
-                                        <div class="product-img">
-                                            <img src="assets/images/products/img-1.png" alt="">
-                                            <div class="pc-btn">Food</div>
-                                            <div class="cart-button"><a href="products.html" class="main-btn btn-yellow">Add to cart</a></div>
+
+                 <!-- Soybean Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="soybean">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://5.imimg.com/data5/SELLER/Default/2025/7/532500801/YE/YN/ED/43229989/sesame-seed-oil-500x500.jpeg" alt="Pure Soybean Oil">
                                         </div>
-                                        <div class="product-info">
-                                            <ul class="ratings">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
+                         <div class="product-content">
+                             <span class="product-badge">Healthy</span>
+                             <h3 class="product-title">Pure Soybean Oil</h3>
+                             <p>Neutral-tasting oil ideal for frying and cooking. Contains omega-3 fatty acids and is cholesterol-free.</p>
+                             <ul class="product-features">
+                                 <li>Omega-3 Fatty Acids</li>
+                                 <li>Cholesterol Free</li>
+                                 <li>Neutral Taste</li>
+                                 <li>Versatile Cooking</li>
                                             </ul>
-                                            <h3 class="title"><a href="product-details.html">Organice Delicious 
-                                                Pomegranate</a></h3>
-                                            <span class="price"><span class="curreny">$</span>53.56</span>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹160</div>
+                                     <div class="product-size">1 Liter</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="single-product-item mb-60 wow fadeInDown">
-                                        <div class="product-img">
-                                            <img src="assets/images/products/img-2.png" alt="">
-                                            <div class="pc-btn">Fish</div>
-                                            <div class="cart-button"><a href="products.html" class="main-btn btn-yellow">Add to cart</a></div>
+
+                 <!-- Groundnut Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="groundnut">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://static.vecteezy.com/system/resources/thumbnails/007/681/376/small/sesame-oil-poster-vector.jpg" alt="Premium Groundnut Oil">
                                         </div>
-                                        <div class="product-info">
-                                            <ul class="ratings">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
+                         <div class="product-content">
+                             <span class="product-badge">Traditional</span>
+                             <h3 class="product-title">Premium Groundnut Oil</h3>
+                             <p>Traditional groundnut oil with rich flavor and aroma. Perfect for Indian cooking and traditional recipes.</p>
+                             <ul class="product-features">
+                                 <li>Rich Flavor</li>
+                                 <li>High Smoke Point</li>
+                                 <li>Traditional Taste</li>
+                                 <li>Natural Aroma</li>
                                             </ul>
-                                            <h3 class="title"><a href="product-details.html">100% Natural Fresh
-                                                Sea Fish</a></h3>
-                                            <span class="price"><span class="curreny">$</span>53.56</span>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹200</div>
+                                     <div class="product-size">1 Liter</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="single-product-item mb-60 wow fadeInUp">
-                                        <div class="product-img">
-                                            <img src="assets/images/products/img-3.png" alt="">
-                                            <div class="pc-btn">Food</div>
-                                            <div class="cart-button"><a href="products.html" class="main-btn btn-yellow">Add to cart</a></div>
+
+                 <!-- Sesame Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="sesame">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://static.vecteezy.com/system/resources/thumbnails/007/681/376/small/sesame-oil-poster-vector.jpg" alt="Pure Sesame Oil">
                                         </div>
-                                        <div class="product-info">
-                                            <ul class="ratings">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
+                         <div class="product-content">
+                             <span class="product-badge">Premium</span>
+                             <h3 class="product-title">Pure Sesame Oil</h3>
+                             <p>Cold-pressed sesame oil with rich aroma and flavor. Perfect for seasoning and traditional cooking.</p>
+                             <ul class="product-features">
+                                 <li>Cold Pressed</li>
+                                 <li>Rich Aroma</li>
+                                 <li>Antioxidant Rich</li>
+                                 <li>Traditional Method</li>
                                             </ul>
-                                            <h3 class="title"><a href="product-details.html">Organice Delicious 
-                                                Pomegranate</a></h3>
-                                            <span class="price"><span class="curreny">$</span>53.56</span>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹250</div>
+                                     <div class="product-size">500ml</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="single-product-item mb-60 wow fadeInDown">
-                                        <div class="product-img">
-                                            <img src="assets/images/products/img-4.png" alt="">
-                                            <div class="pc-btn">Vegetable</div>
-                                            <div class="cart-button"><a href="products.html" class="main-btn btn-yellow">Add to cart</a></div>
+
+                 <!-- Blended Oils Product -->
+                 <div class="col-lg-4 col-md-6" data-category="blended">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://pansari.co.in/wp-content/uploads/2025/06/Cold-pressed-vs-refined-oils-Whats-better-1024x536.jpg" alt="Premium Blended Oils">
                                         </div>
-                                        <div class="product-info">
-                                            <ul class="ratings">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
+                         <div class="product-content">
+                             <span class="product-badge">Special</span>
+                             <h3 class="product-title">Premium Blended Oils</h3>
+                             <p>Carefully crafted blend of multiple oils for balanced nutrition and enhanced cooking experience.</p>
+                             <ul class="product-features">
+                                 <li>Balanced Nutrition</li>
+                                 <li>Multiple Oil Blend</li>
+                                 <li>Enhanced Flavor</li>
+                                 <li>Health Benefits</li>
                                             </ul>
-                                            <h3 class="title"><a href="product-details.html">Organice Delicious 
-                                                Pomegranate</a></h3>
-                                            <span class="price"><span class="curreny">$</span>53.56</span>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹190</div>
+                                     <div class="product-size">1 Liter</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="single-product-item mb-60 wow fadeInUp">
-                                        <div class="product-img">
-                                            <img src="assets/images/products/img-5.png" alt="">
-                                            <div class="pc-btn">Fruits</div>
-                                            <div class="cart-button"><a href="products.html" class="main-btn btn-yellow">Add to cart</a></div>
+
+                 <!-- Coconut Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="coconut">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://m.media-amazon.com/images/I/81ZDJN2sMgL._UF350,350_QL80_.jpg" alt="Virgin Coconut Oil">
                                         </div>
-                                        <div class="product-info">
-                                            <ul class="ratings">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
+                         <div class="product-content">
+                             <span class="product-badge">Organic</span>
+                             <h3 class="product-title">Virgin Coconut Oil</h3>
+                             <p>Pure virgin coconut oil with natural aroma and health benefits. Perfect for cooking and beauty applications.</p>
+                             <ul class="product-features">
+                                 <li>Virgin Quality</li>
+                                 <li>Natural Aroma</li>
+                                 <li>Health Benefits</li>
+                                 <li>Multi-purpose Use</li>
                                             </ul>
-                                            <h3 class="title"><a href="product-details.html">Organice Delicious 
-                                                Pomegranate</a></h3>
-                                            <span class="price"><span class="curreny">$</span>53.56</span>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹280</div>
+                                     <div class="product-size">500ml</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="single-product-item mb-60 wow fadeInDown">
-                                        <div class="product-img">
-                                            <img src="assets/images/products/img-6.png" alt="">
-                                            <div class="pc-btn">Orange</div>
-                                            <div class="cart-button"><a href="products.html" class="main-btn btn-yellow">Add to cart</a></div>
+                
+                                    </div>
                                         </div>
-                                        <div class="product-info">
-                                            <ul class="ratings">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <h3 class="title"><a href="product-details.html">Organice Delicious 
-                                                Pomegranate</a></h3>
-                                            <span class="price"><span class="curreny">$</span>53.56</span>
+    </section>
+    <!--====== End Products Section ======-->
+
+    <!--====== Start Health Benefits Section ======-->
+    <section class="health-benefits">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span class="sub-title">Why Choose Our Oils</span>
+                        <h2>Health Benefits</h2>
+                        <p>Discover the nutritional advantages of our pure edible oils</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="single-product-item mb-60 wow fadeInUp">
-                                        <div class="product-img">
-                                            <img src="assets/images/products/img-7.png" alt="">
-                                            <div class="pc-btn">Fruits</div>
-                                            <div class="cart-button"><a href="products.html" class="main-btn btn-yellow">Add to cart</a></div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="flaticon-heart"></i>
+                                </div>
+                        <h4>Heart Healthy</h4>
+                        <p>Our oils are rich in monounsaturated fats that support cardiovascular health and help maintain healthy cholesterol levels.</p>
                                         </div>
-                                        <div class="product-info">
-                                            <ul class="ratings">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <h3 class="title"><a href="product-details.html">Organice Delicious 
-                                                Pomegranate</a></h3>
-                                            <span class="price"><span class="curreny">$</span>53.56</span>
+                                        </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="flaticon-immunity"></i>
+                                    </div>
+                        <h4>Rich in Antioxidants</h4>
+                        <p>Packed with natural antioxidants that help combat free radicals and support overall immune system function.</p>
+                                </div>
+                                        </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="flaticon-digestion"></i>
+                                        </div>
+                        <h4>Easy Digestion</h4>
+                        <p>Light and easily digestible oils that don't burden your digestive system while providing essential nutrients.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="single-product-item mb-60 wow fadeInDown">
-                                        <div class="product-img">
-                                            <img src="assets/images/products/img-8.png" alt="">
-                                            <div class="pc-btn">Fish</div>
-                                            <div class="cart-button"><a href="products.html" class="main-btn btn-yellow">Add to cart</a></div>
                                         </div>
-                                        <div class="product-info">
-                                            <ul class="ratings">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <h3 class="title"><a href="product-details.html">Organice Delicious 
-                                                Pomegranate</a></h3>
-                                            <span class="price"><span class="curreny">$</span>53.56</span>
+    </section>
+    <!--====== End Health Benefits Section ======-->
+
+    <!--====== Start Manufacturing Process Section ======-->
+    <section class="manufacturing-process">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span class="sub-title">Our Process</span>
+                        <h2>Traditional Manufacturing</h2>
+                        <p>Combining traditional methods with modern technology for the purest oils</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="single-product-item mb-60 wow fadeInUp">
-                                        <div class="product-img">
-                                            <img src="assets/images/products/img-9.png" alt="">
-                                            <div class="pc-btn">Banana</div>
-                                            <div class="cart-button"><a href="products.html" class="main-btn btn-yellow">Add to cart</a></div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Seed Selection</h4>
+                        <p>Carefully selected premium quality seeds from trusted farmers</p>
                                         </div>
-                                        <div class="product-info">
-                                            <ul class="ratings">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <h3 class="title"><a href="product-details.html">Organice Delicious 
-                                                Pomegranate</a></h3>
-                                            <span class="price"><span class="curreny">$</span>53.56</span>
+                                    </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Traditional Extraction</h4>
+                        <p>Using traditional Kolhu method for cold-pressed extraction</p>
+                                </div>
+                            </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Natural Filtration</h4>
+                        <p>No chemical refining - naturally filtered for purity</p>
+                        </div>
+                                        </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Quality Testing</h4>
+                        <p>Rigorous quality control and FSSAI certification</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="single-product-item mb-60 wow fadeInUp">
-                                        <div class="product-img">
-                                            <img src="assets/images/products/img-10.png" alt="">
-                                            <div class="pc-btn">Banana</div>
-                                            <div class="cart-button"><a href="products.html" class="main-btn btn-yellow">Add to cart</a></div>
                                         </div>
-                                        <div class="product-info">
-                                            <ul class="ratings">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <h3 class="title"><a href="product-details.html">Organice Delicious 
-                                                Pomegranate</a></h3>
-                                            <span class="price"><span class="curreny">$</span>53.56</span>
+    </section>
+    <!--====== End Manufacturing Process Section ======-->
+
+
+
+    <!--====== Start Features Section ======-->
+    <section class="features-section dark-black-bg pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title section-title-white text-center mb-60">
+                        <span class="sub-title">Why Choose Us</span>
+                        <h2>Quality You Can Trust</h2>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="single-product-item mb-60 wow fadeInUp">
-                                        <div class="product-img">
-                                            <img src="assets/images/products/img-11.png" alt="">
-                                            <div class="pc-btn">Banana</div>
-                                            <div class="cart-button"><a href="products.html" class="main-btn btn-yellow">Add to cart</a></div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="features-item text-center mb-30">
+                        <div class="icon">
+                            <i class="flaticon-tractor"></i>
                                         </div>
-                                        <div class="product-info">
-                                            <ul class="ratings">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <h3 class="title"><a href="product-details.html">Organice Delicious 
-                                                Pomegranate</a></h3>
-                                            <span class="price"><span class="curreny">$</span>53.56</span>
+                        <div class="text">
+                            <h4>Traditional Process</h4>
+                            <p>Using traditional Kolhu extraction methods combined with modern technology for pure, natural oils</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="single-product-item mb-60 wow fadeInUp">
-                                        <div class="product-img">
-                                            <img src="assets/images/products/img-12.png" alt="">
-                                            <div class="pc-btn">Banana</div>
-                                            <div class="cart-button"><a href="products.html" class="main-btn btn-yellow">Add to cart</a></div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="features-item text-center mb-30">
+                                <div class="icon">
+                            <i class="flaticon-quality"></i>
                                         </div>
-                                        <div class="product-info">
-                                            <ul class="ratings">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <h3 class="title"><a href="product-details.html">Organice Delicious 
-                                                Pomegranate</a></h3>
-                                            <span class="price"><span class="curreny">$</span>53.56</span>
+                                <div class="text">
+                            <h4>Quality Certified</h4>
+                            <p>FSSAI certified with highest quality standards and rigorous quality control in every batch</p>
                                         </div>
                                     </div>
                                 </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="features-item text-center mb-30">
+                                <div class="icon">
+                            <i class="flaticon-natural"></i>
+                                </div>
+                                <div class="text">
+                            <h4>Natural Filtration</h4>
+                            <p>No chemical refining - our oils are naturally filtered to preserve their natural goodness</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section><!--====== End Shop Section ======-->
+    </section>
+     <!--====== End Features Section ======-->
+
+
+
         <!--====== Start Footer ======-->
         <footer class="footer-default footer-white dark-black-bg">
             <div class="container">
@@ -522,7 +748,7 @@
                         <div class="col-lg-4 col-md-12 footer-contact-item">
                             <div class="contact-info d-flex justify-content-center">
                                 <div class="site-logo text-center">
-                                    <a href="index.html" class="brand-logo"><img src="assets/images/logo/new-logo.png" alt="Footer Logo"></a>
+                                 <a href="index.html" class="brand-logo"><img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo"></a>
                                 </div>
                             </div>
                         </div>
@@ -532,19 +758,19 @@
                                     <i class="flaticon-placeholder"></i>
                                 </div>
                                 <div class="text">
-                                    <h5>Locations</h5>
-                                    <h6>55 Main Street, New York</h6>
+                                 <h5>Our Factory</h5>
+                                 <h6>Modinagar, Ghaziabad, UP</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 footer-contact-item">
                             <div class="contact-info d-flex">
                                 <div class="icon">
-                                    <i class="flaticon-placeholder"></i>
+                                 <i class="flaticon-email"></i>
                                 </div>
                                 <div class="text">
                                     <h5>Email Us</h5>
-                                    <h6><a href="mailto:hotlineinfo@gmial.com">hotlineinfo@gmial.com</a></h6>
+                                 <h6><a href="mailto:bharatagrooil@yahoo.in">bharatagrooil@yahoo.in</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -554,16 +780,15 @@
                     <div class="row">
                         <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
                             <div class="footer-widget about-widget mb-40 wow fadeInDown">
-                                <h4 class="widget-title">About Us</h4>
+                             <h4 class="widget-title">About Bharat Agro Oil</h4>
                                 <div class="footer-about-content">
-                                    <p>Sit amet consectetur adipiscing
-                                        elit sed do eiusmo tempor incidunt ut labore et dolore magna aliquae. Quis ipsum suspendisse ultrices gravida commodo viverra</p>
+                                 <p>Since 1978, we have been dedicated to delivering purity, quality, and health in every drop. We strive to bring premium-grade edible oils to households, hotels, and businesses across India.</p>
                                     <div class="social-box">
-                                        <h4 class="mb-15">Follow On</h4>
+                                     <h4 class="mb-15">Follow Us</h4>
                                         <ul class="social-link">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                         <li><a href="https://www.facebook.com/bharatagrooil" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                         <li><a href="https://www.instagram.com/bharatagrooil/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                                             <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                                         </ul>
                                     </div>
@@ -572,48 +797,39 @@
                         </div>
                         <div class="col-lg-4 col-lg-4 col-md-7 col-sm-12">
                             <div class="footer-widget footer-nav-widget mb-40 wow fadeInUp">
-                                <h4 class="widget-title">Services</h4>
+                             <h4 class="widget-title">Quick Links</h4>
                                 <div class="footer-widget-nav">
                                     <ul>
-                                        <li><a href="#">Agriculture Foods</a></li>
-                                        <li><a href="#">Organic Vegetables</a></li>
-                                        <li><a href="#">Pond & Sea Fish</a></li>
-                                        <li><a href="#">Cow Milk & Meat</a></li>
-                                        <li><a href="#">Modern Equipment</a></li>
-                                        <li><a href="#">Natural Wheats</a></li>
-                                        <li><a href="#">Eggs & Meat</a></li>
+                                     <li><a href="mustard-oil.html">Mustard Oil</a></li>
+                                     <li><a href="soybean-oil.html">Soybean Oil</a></li>
+                                     <li><a href="sunflower-oil.html">Sunflower Oil</a></li>
+                                     <li><a href="groundnut-oil.html">Groundnut Oil</a></li>
+                                     <li><a href="blended-oils.html">Blended Oils</a></li>
+                                     <li><a href="recipes.html">Recipes</a></li>
                                     </ul>
                                     <ul>
-                                        <li><a href="#">Company History</a></li>
-                                        <li><a href="#">Latest News</a></li>
-                                        <li><a href="#">Needs a Career ?</a></li>
-                                        <li><a href="#">Meet The Team</a></li>
-                                        <li><a href="#">Setting & Privacy</a></li>
-                                        <li><a href="#">My Account</a></li>
+                                     <li><a href="about.html">About Us</a></li>
+                                     <li><a href="services.html">Our Services</a></li>
+                                     <li><a href="contact.html">Contact Us</a></li>
+                                     <li><a href="#">Privacy Policy</a></li>
+                                     <li><a href="#">Terms & Conditions</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-lg-4 col-md-6 col-sm-12">
                             <div class="footer-widget recent-post-widget mb-40 wow fadeInDown">
-                                <h4 class="widget-title">Recent News</h4>
-                                <ul class="post-widget-wrap">
-                                    <li class="post-item">
-                                        <img src="assets/images/widget/news-1.jpg" alt="Post Image">
-                                        <div class="post-title-date">
-                                            <h3 class="title"><a href="blog-details.html">Designing Better Links Websites & Emails</a></h3>
-                                            <span class="posted-on"><i class="fas fa-calendar-alt"></i><a href="#">25 March 2022</a></span>
+                             <h4 class="widget-title">Distribution Areas</h4>
+                             <div class="distribution-areas">
+                                 <div class="area-item">
+                                     <h5>States Covered:</h5>
+                                     <p>Uttar Pradesh, Delhi, Haryana, Punjab, Rajasthan, Madhya Pradesh</p>
                                         </div>
-                                    </li>
-                                    <li class="post-item">
-                                        <img src="assets/images/widget/news-2.jpg" alt="Post Image">
-                                        <div class="post-title-date">
-                                            <h3 class="title"><a href="blog-details.html">Advent Calendars For Web Designers</a></h3>
-                                            <span class="posted-on"><i class="fas fa-calendar-alt"></i><a href="#">25 March 2022</a></span>
+                                 <div class="area-item">
+                                     <h5>Certifications:</h5>
+                                     <p>FSSAI License: 10017051002014</p>
                                         </div>
-                                    </li>
-                                </ul>
-                                <a href="blog-standard.html" class="more-btn">View More News</a>
+                                        </div>
                             </div>
                         </div>
                     </div>
@@ -622,8 +838,7 @@
                     <div class="row">
                         <div class="col-xl-3">
                             <div class="footer-text">
-                                <h5>Subscrive Our Newsletter
-                                    To Get More Updates</h5>
+                             <h5>Subscribe for Updates & Offers</h5>
                             </div>
                         </div>
                         <div class="col-xl-9">
@@ -637,12 +852,12 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form_group">
-                                                <input type="text" class="form_control" placeholder="Phone" name="phone" required>
+                                             <input type="text" class="form_control" placeholder="Phone Number" name="phone" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form_group">
-                                                <button class="main-btn btn-yellow">Subscribe Now</button>
+                                             <button class="main-btn btn-yellow">Subscribe</button>
                                             </div>
                                         </div>
                                     </div>
@@ -654,39 +869,68 @@
                 <div class="footer-copyright">
                     <div class="col-lg-12">
                         <div class="copyright-text text-center">
-                            <p>&copy; 2022 Orgrarium. All Rights Reserved</p>
+                         <p>&copy; 2024 Bharat Agro Oil. All Rights Reserved | Since 1978</p>
                         </div>
                     </div>
                 </div>
             </div>
         </footer><!--====== End Footer ======-->
+
         <!--====== back-to-top ======-->
-        <a href="#" class="back-to-top" ><i class="far fa-angle-up"></i></a>
-        <!--====== Jquery js ======-->
+    <a href="#" class="back-to-top"><i class="far fa-angle-up"></i></a>
+
+    <!--====== JavaScript Files ======-->
         <script src="assets/vendor/jquery-3.6.0.min.js"></script>
-        <!--====== Bootstrap js ======-->
-        <script src="assets/vendor/popper/popper.min.js"></script>
-        <!--====== Bootstrap js ======-->
         <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-        <!--====== Slick js ======-->
-        <script src="assets/vendor/slick/slick.min.js"></script>
-        <!--====== Magnific js ======-->
-        <script src="assets/vendor/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-        <!--====== Isotope js ======-->
-        <script src="assets/vendor/isotope.min.js"></script>
-        <!--====== Imagesloaded js ======-->
-        <script src="assets/vendor/imagesloaded.min.js"></script>
-        <!--====== Counterup js ======-->
-        <script src="assets/vendor/jquery.counterup.min.js"></script>
-        <!--====== Waypoints js ======-->
-        <script src="assets/vendor/jquery.waypoints.js"></script>
-        <!--====== Nice-select js ======-->
-        <script src="assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
-        <!--====== jquery UI js ======-->
-        <script src="assets/vendor/jquery-ui/jquery-ui.min.js"></script>
-        <!--====== WOW js ======-->
-        <script src="assets/vendor/wow.min.js"></script>
-        <!--====== Main js ======-->
-        <script src="assets/js/theme.js"></script>
+     <script>
+         // Product Filter Functionality
+         $(document).ready(function(){
+             $('.filter-btn').on('click', function(){
+                 // Remove active class from all buttons
+                 $('.filter-btn').removeClass('active');
+                 // Add active class to clicked button
+                 $(this).addClass('active');
+                 
+                 var filterValue = $(this).attr('data-filter');
+                 
+                 if(filterValue == 'all') {
+                     $('[data-category]').parent().show();
+                 } else {
+                     $('[data-category]').parent().hide();
+                     $('[data-category="' + filterValue + '"]').parent().show();
+                 }
+             });
+
+             // Hide preloader when page is loaded
+             $(window).on('load', function() {
+                 $('.preloader').fadeOut('slow');
+             });
+
+             // Smooth scrolling for anchor links
+             $('a[href^="#"]').on('click', function(event) {
+                 var target = $(this.getAttribute('href'));
+                 if( target.length ) {
+                     event.preventDefault();
+                     $('html, body').stop().animate({
+                         scrollTop: target.offset().top - 100
+                     }, 1000);
+                 }
+             });
+
+             // Add animation to product cards on scroll
+             $(window).scroll(function() {
+                 $('.product-card').each(function() {
+                     var elementTop = $(this).offset().top;
+                     var elementBottom = elementTop + $(this).outerHeight();
+                     var viewportTop = $(window).scrollTop();
+                     var viewportBottom = viewportTop + $(window).height();
+
+                     if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                         $(this).addClass('animate__animated animate__fadeInUp');
+                     }
+                 });
+             });
+         });
+     </script>
     </body>
 </html>
