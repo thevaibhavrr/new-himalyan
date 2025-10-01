@@ -124,6 +124,13 @@
             background: #f8f9fa;
             padding: 40px 0;
         }
+        
+        .product-categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
         .filter-btn {
             background: transparent;
             border: 2px solid #eece38;
@@ -137,6 +144,103 @@
         .filter-btn.active, .filter-btn:hover {
             background: #eece38;
             color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(238, 206, 56, 0.3);
+        }
+        
+        .filter-btn.loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        
+        .filter-btn.loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            margin: -8px 0 0 -8px;
+            border: 2px solid transparent;
+            border-top: 2px solid #000;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .search-box {
+            position: relative;
+            max-width: 400px;
+        }
+        
+        .search-box input {
+            padding: 12px 45px 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box input:focus {
+            border-color: #eece38;
+            box-shadow: 0 0 0 0.2rem rgba(238, 206, 56, 0.25);
+            outline: none;
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+            font-size: 16px;
+        }
+        
+        .product-count {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
+        }
+        
+        .badge {
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .badge-primary {
+            background: linear-gradient(135deg, #eece38, #ff8f00);
+            color: #000;
+            border-radius: 20px;
+        }
+        
+        .clear-search-btn {
+            position: absolute;
+            right: 45px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .clear-search-btn:hover {
+            background: #c82333;
+            transform: translateY(-50%) scale(1.1);
         }
         .section-title {
             position: relative;
@@ -333,7 +437,7 @@
                                     <ul>
                                      <li><a href="index.html">Home</a></li>
                                      <li><a href="about.html">About Us</a></li>
-                                     <li><a href="products.html">Our Products</a></li>
+                                                <li><a href="products.html">Our Products</a></li>
                                      <li><a href="recipes.html">Recipes</a></li>
                                      <li><a href="services.html" class="active">Service page</a></li>
                                      <li><a href="contact.html">Contact Us</a></li>
@@ -356,36 +460,58 @@
 
     <!--====== Start Product Hero Section ======-->
     <section class="product-hero">
-        <div class="container">
-            <div class="row">
+            <div class="container">
+                <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <h1 style="color: white;">Our Premium Edible Oils</h1>
                     <p class="lead" style="color: white;">Discover our range of pure, natural, and healthy cooking oils crafted with traditional methods and modern technology</p>
                     <a href="#products" class="main-btn btn-yellow">View Our Products</a>
             </div>
-                        </div>
-            </div>
+                    </div>
+                </div>
     </section>
     <!--====== End Product Hero Section ======-->
 
-    <!--====== Start Category Filter Section ======-->
-    <section class="category-filter">
+     <!--====== Start Category Filter Section ======-->
+     <section class="category-filter">
             <div class="container">
                 <div class="row">
-                <div class="col-lg-12">
-                    <div class="product-categories">
-                        <button class="filter-btn active" data-filter="all">All Products</button>
-                        <button class="filter-btn" data-filter="mustard">Mustard Oil</button>
-                        <button class="filter-btn" data-filter="sunflower">Sunflower Oil</button>
-                        <button class="filter-btn" data-filter="soybean">Soybean Oil</button>
-                        <button class="filter-btn" data-filter="groundnut">Groundnut Oil</button>
-                        <button class="filter-btn" data-filter="blended">Blended Oils</button>
+                 <div class="col-lg-12">
+                     <div class="product-categories">
+                         <button class="filter-btn active" data-filter="all">All Products</button>
+                         <button class="filter-btn" data-filter="mustard">Mustard Oil</button>
+                         <button class="filter-btn" data-filter="sunflower">Sunflower Oil</button>
+                         <button class="filter-btn" data-filter="soybean">Soybean Oil</button>
+                         <button class="filter-btn" data-filter="groundnut">Groundnut Oil</button>
+                         <button class="filter-btn" data-filter="blended">Blended Oils</button>
+                         <button class="filter-btn" data-filter="coconut">Coconut Oil</button>
+                         <button class="filter-btn" data-filter="olive">Olive Oil</button>
+                         <button class="filter-btn" data-filter="ricebran">Rice Bran Oil</button>
+                         <button class="filter-btn" data-filter="corn">Corn Oil</button>
+                         <button class="filter-btn" data-filter="palm">Palm Oil</button>
+                         <button class="filter-btn" data-filter="cottonseed">Cottonseed Oil</button>
                         </div>
                     </div>
                 </div>
+                 <div class="row mt-4">
+                     <div class="col-lg-6">
+                         <div class="search-box">
+                             <input type="text" id="product-search" class="form-control" placeholder="Search products...">
+                             <i class="fas fa-search search-icon"></i>
+                             <button type="button" id="clear-search" class="clear-search-btn" style="display: none;">
+                                 <i class="fas fa-times"></i>
+                             </button>
             </div>
-    </section>
-    <!--====== End Category Filter Section ======-->
+                     </div>
+                     <div class="col-lg-6">
+                         <div class="product-count text-right">
+                             <span class="badge badge-primary">16 products found</span>
+                         </div>
+                     </div>
+                 </div>
+                            </div>
+     </section>
+     <!--====== End Category Filter Section ======-->
 
     <!--====== Start Products Section ======-->
     <section id="products" class="products-section pt-100 pb-100">
@@ -421,11 +547,11 @@
                                 <div>
                                     <div class="product-price">₹220</div>
                                     <div class="product-size">1 Liter</div>
-                                        </div>
+                                    </div>
                                     </div>
                             <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
                                         </div>
-                                    </div>
                                 </div>
 
                  <!-- Sunflower Oil Product -->
@@ -451,16 +577,16 @@
                                         </div>
                                     </div>
                              <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
                             </div>
                         </div>
-                </div>
 
                  <!-- Soybean Oil Product -->
                  <div class="col-lg-4 col-md-6" data-category="soybean">
                      <div class="product-card">
                          <div class="product-image">
                              <img src="https://5.imimg.com/data5/SELLER/Default/2025/7/532500801/YE/YN/ED/43229989/sesame-seed-oil-500x500.jpeg" alt="Pure Soybean Oil">
-                                        </div>
+                </div>
                          <div class="product-content">
                              <span class="product-badge">Healthy</span>
                              <h3 class="product-title">Pure Soybean Oil</h3>
@@ -478,8 +604,8 @@
                                         </div>
                                     </div>
                              <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
                                         </div>
-                                    </div>
                                 </div>
 
                  <!-- Groundnut Oil Product -->
@@ -505,8 +631,8 @@
                                         </div>
                                     </div>
                              <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
                                         </div>
-                                    </div>
                                 </div>
 
                  <!-- Sesame Oil Product -->
@@ -532,8 +658,8 @@
                                         </div>
                                     </div>
                              <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
                                         </div>
-                                    </div>
                                 </div>
 
                  <!-- Blended Oils Product -->
@@ -559,8 +685,8 @@
                                         </div>
                                     </div>
                              <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
                                         </div>
-                                    </div>
                                 </div>
 
                  <!-- Coconut Oil Product -->
@@ -586,12 +712,282 @@
                                         </div>
                                     </div>
                              <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
+                                        </div>
+                                        </div>
+
+                 <!-- Olive Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="olive">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://m.media-amazon.com/images/I/81Kvxhuu5qL._UF350,350_QL80_.jpg" alt="Extra Virgin Olive Oil">
+                                        </div>
+                         <div class="product-content">
+                             <span class="product-badge">Premium</span>
+                             <h3 class="product-title">Extra Virgin Olive Oil</h3>
+                             <p>Premium quality extra virgin olive oil from Mediterranean region. Perfect for salads and light cooking.</p>
+                             <ul class="product-features">
+                                 <li>First Cold Press</li>
+                                 <li>Mediterranean Quality</li>
+                                 <li>Rich in Antioxidants</li>
+                                 <li>Perfect for Salads</li>
+                                            </ul>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹450</div>
+                                     <div class="product-size">500ml</div>
                                         </div>
                                     </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
                                 </div>
+                                        </div>
+                                        </div>
+
+                 <!-- Rice Bran Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="ricebran">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://5.imimg.com/data5/SELLER/Default/2023/5/308418319/CC/BQ/UC/62947621/100-pure-cold-pressed-white-sesame-seed-oil-500x500.jpg" alt="Rice Bran Oil">
+                                        </div>
+                         <div class="product-content">
+                             <span class="product-badge">Healthy</span>
+                             <h3 class="product-title">Rice Bran Oil</h3>
+                             <p>Light and healthy rice bran oil with high smoke point. Ideal for deep frying and high-temperature cooking.</p>
+                             <ul class="product-features">
+                                 <li>High Smoke Point</li>
+                                 <li>Heart Healthy</li>
+                                 <li>Light & Neutral</li>
+                                 <li>Perfect for Frying</li>
+                                            </ul>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹190</div>
+                                     <div class="product-size">1 Liter</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
+                                        </div>
+                                        </div>
+
+                 <!-- Corn Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="corn">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://static.vecteezy.com/system/resources/thumbnails/007/681/376/small/sesame-oil-poster-vector.jpg" alt="Corn Oil">
+                                        </div>
+                         <div class="product-content">
+                             <span class="product-badge">Versatile</span>
+                             <h3 class="product-title">Corn Oil</h3>
+                             <p>Versatile corn oil with light flavor and high smoke point. Perfect for all types of cooking applications.</p>
+                             <ul class="product-features">
+                                 <li>Light Flavor</li>
+                                 <li>High Smoke Point</li>
+                                 <li>Versatile Cooking</li>
+                                 <li>Budget Friendly</li>
+                                            </ul>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹120</div>
+                                     <div class="product-size">1 Liter</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
+                                        </div>
+                                        </div>
+
+                 <!-- Palm Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="palm">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://c8.alamy.com/comp/2AK7099/sunflower-oil-cooking-oils-bottles-background-2AK7099.jpg" alt="Palm Oil">
+                                        </div>
+                         <div class="product-content">
+                             <span class="product-badge">Industrial</span>
+                             <h3 class="product-title">Palm Oil</h3>
+                             <p>High-quality palm oil with excellent stability and long shelf life. Ideal for commercial and industrial use.</p>
+                             <ul class="product-features">
+                                 <li>High Stability</li>
+                                 <li>Long Shelf Life</li>
+                                 <li>Industrial Grade</li>
+                                 <li>Bulk Packaging</li>
+                                            </ul>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹85</div>
+                                     <div class="product-size">5 Liter</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
+                                        </div>
+                                        </div>
+
+                 <!-- Cottonseed Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="cottonseed">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://5.imimg.com/data5/SELLER/Default/2025/7/532500801/YE/YN/ED/43229989/sesame-seed-oil-500x500.jpeg" alt="Cottonseed Oil">
+                                        </div>
+                         <div class="product-content">
+                             <span class="product-badge">Commercial</span>
+                             <h3 class="product-title">Cottonseed Oil</h3>
+                             <p>Neutral-tasting cottonseed oil perfect for commercial cooking and food processing applications.</p>
+                             <ul class="product-features">
+                                 <li>Neutral Taste</li>
+                                 <li>High Stability</li>
+                                 <li>Commercial Use</li>
+                                 <li>Bulk Supply</li>
+                                            </ul>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹95</div>
+                                     <div class="product-size">5 Liter</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
+                                        </div>
+                                        </div>
+
+                 <!-- Additional Mustard Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="mustard">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://m.media-amazon.com/images/I/41VcEW2gjlL._UF894,1000_QL80_.jpg" alt="Premium Mustard Oil">
+                                        </div>
+                         <div class="product-content">
+                             <span class="product-badge">Premium</span>
+                             <h3 class="product-title">Premium Mustard Oil</h3>
+                             <p>Extra virgin mustard oil with traditional kolhu extraction method. Rich aroma and authentic taste.</p>
+                             <ul class="product-features">
+                                 <li>Extra Virgin</li>
+                                 <li>Traditional Kolhu</li>
+                                 <li>Rich Aroma</li>
+                                 <li>Premium Quality</li>
+                                            </ul>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹250</div>
+                                     <div class="product-size">1 Liter</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
+                                        </div>
+                                        </div>
+
+                 <!-- Additional Sunflower Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="sunflower">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/edible-oil/i/f/s/10-sunflower-oil-5-ltr-x-2-pack-pure-nutrient-rich-cooking-oil-original-imah9gsdz5tz7huf.jpeg?q=90" alt="Refined Sunflower Oil">
+                                        </div>
+                         <div class="product-content">
+                             <span class="product-badge">Refined</span>
+                             <h3 class="product-title">Refined Sunflower Oil</h3>
+                             <p>Light and clear refined sunflower oil perfect for daily cooking. Neutral flavor and high smoke point.</p>
+                             <ul class="product-features">
+                                 <li>Light & Clear</li>
+                                 <li>Neutral Flavor</li>
+                                 <li>High Smoke Point</li>
+                                 <li>Daily Cooking</li>
+                                            </ul>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹140</div>
+                                     <div class="product-size">1 Liter</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
+                                        </div>
+                                        </div>
+
+                 <!-- Additional Soybean Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="soybean">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://pansari.co.in/wp-content/uploads/2025/06/Cold-pressed-vs-refined-oils-Whats-better-1024x536.jpg" alt="Organic Soybean Oil">
+                                        </div>
+                         <div class="product-content">
+                             <span class="product-badge">Organic</span>
+                             <h3 class="product-title">Organic Soybean Oil</h3>
+                             <p>Certified organic soybean oil with non-GMO ingredients. Heart-healthy and perfect for health-conscious consumers.</p>
+                             <ul class="product-features">
+                                 <li>Organic Certified</li>
+                                 <li>Non-GMO</li>
+                                 <li>Heart Healthy</li>
+                                 <li>Premium Quality</li>
+                                            </ul>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹180</div>
+                                     <div class="product-size">1 Liter</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                 <!-- Additional Groundnut Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="groundnut">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://m.media-amazon.com/images/I/81ZDJN2sMgL._UF350,350_QL80_.jpg" alt="Cold Pressed Groundnut Oil">
+                    </div>
+                         <div class="product-content">
+                             <span class="product-badge">Cold Pressed</span>
+                             <h3 class="product-title">Cold Pressed Groundnut Oil</h3>
+                             <p>Traditional cold-pressed groundnut oil with natural flavor and rich nutrients. Perfect for authentic cooking.</p>
+                             <ul class="product-features">
+                                 <li>Cold Pressed</li>
+                                 <li>Natural Flavor</li>
+                                 <li>Rich Nutrients</li>
+                                 <li>Traditional Method</li>
+                                            </ul>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹220</div>
+                                     <div class="product-size">1 Liter</div>
+                </div>
+            </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
+                                        </div>
+                                        </div>
+
+                 <!-- Additional Blended Oil Product -->
+                 <div class="col-lg-4 col-md-6" data-category="blended">
+                     <div class="product-card">
+                         <div class="product-image">
+                             <img src="https://m.media-amazon.com/images/I/81Kvxhuu5qL._UF350,350_QL80_.jpg" alt="Health Mix Oil">
+                                        </div>
+                         <div class="product-content">
+                             <span class="product-badge">Health Mix</span>
+                             <h3 class="product-title">Health Mix Oil</h3>
+                             <p>Specially blended multi-oil combination for balanced nutrition. Perfect blend of different healthy oils.</p>
+                             <ul class="product-features">
+                                 <li>Multi-Oil Blend</li>
+                                 <li>Balanced Nutrition</li>
+                                 <li>Heart Healthy</li>
+                                 <li>Daily Use</li>
+                                            </ul>
+                             <div class="product-meta">
+                                 <div>
+                                     <div class="product-price">₹170</div>
+                                     <div class="product-size">1 Liter</div>
+                                        </div>
+                                    </div>
+                             <a href="contact.html" class="product-btn">Inquire Now</a>
+                                </div>
+                                        </div>
+                                        </div>
                 
                                     </div>
-                                        </div>
+                                </div>
     </section>
     <!--====== End Products Section ======-->
 
@@ -605,8 +1001,8 @@
                         <h2>Health Benefits</h2>
                         <p>Discover the nutritional advantages of our pure edible oils</p>
                                         </div>
+                                        </div>
                                     </div>
-                                </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="benefit-card">
@@ -633,9 +1029,9 @@
                                         </div>
                         <h4>Easy Digestion</h4>
                         <p>Light and easily digestible oils that don't burden your digestive system while providing essential nutrients.</p>
-                                        </div>
                                     </div>
                                 </div>
+                                        </div>
                                         </div>
     </section>
     <!--====== End Health Benefits Section ======-->
@@ -649,24 +1045,24 @@
                         <span class="sub-title">Our Process</span>
                         <h2>Traditional Manufacturing</h2>
                         <p>Combining traditional methods with modern technology for the purest oils</p>
-                                        </div>
                                     </div>
                                 </div>
+                            </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="process-step">
                         <div class="step-number">1</div>
                         <h4>Seed Selection</h4>
                         <p>Carefully selected premium quality seeds from trusted farmers</p>
-                                        </div>
-                                    </div>
+                        </div>
+                    </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="process-step">
                         <div class="step-number">2</div>
                         <h4>Traditional Extraction</h4>
                         <p>Using traditional Kolhu method for cold-pressed extraction</p>
-                                </div>
-                            </div>
+                </div>
+            </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="process-step">
                         <div class="step-number">3</div>
@@ -885,6 +1281,7 @@
      <script>
          // Product Filter Functionality
          $(document).ready(function(){
+             // Initialize filter functionality
              $('.filter-btn').on('click', function(){
                  // Remove active class from all buttons
                  $('.filter-btn').removeClass('active');
@@ -893,12 +1290,92 @@
                  
                  var filterValue = $(this).attr('data-filter');
                  
+                 // Get all product cards
+                 var $products = $('.product-card').parent();
+                 
                  if(filterValue == 'all') {
-                     $('[data-category]').parent().show();
+                     // Show all products with animation
+                     $products.hide().fadeIn(500);
                  } else {
-                     $('[data-category]').parent().hide();
-                     $('[data-category="' + filterValue + '"]').parent().show();
+                     // Hide all products first
+                     $products.hide();
+                     
+                     // Show only products matching the filter
+                     $products.filter(function() {
+                         return $(this).find('[data-category="' + filterValue + '"]').length > 0;
+                     }).fadeIn(500);
                  }
+                 
+                 // Update product count
+                 updateProductCount(filterValue);
+             });
+
+             // Function to update product count
+             function updateProductCount(filterValue) {
+                 var visibleCount = 0;
+                 if (filterValue == 'all') {
+                     visibleCount = $('.product-card').parent().length;
+                 } else {
+                     visibleCount = $('[data-category="' + filterValue + '"]').parent().length;
+                 }
+                 
+                 // Update count display
+                 $('.badge').text(visibleCount + ' products found');
+                 
+                 // Add animation to count update
+                 $('.badge').addClass('animate__animated animate__pulse');
+                 setTimeout(function() {
+                     $('.badge').removeClass('animate__animated animate__pulse');
+                 }, 1000);
+             }
+
+             // Add smooth animations to filter buttons
+             $('.filter-btn').hover(
+                 function() {
+                     $(this).css('transform', 'translateY(-2px)');
+                 },
+                 function() {
+                     $(this).css('transform', 'translateY(0)');
+                 }
+             );
+
+             // Add search functionality
+             $('#product-search').on('keyup', function() {
+                 var searchTerm = $(this).val().toLowerCase();
+                 var visibleCount = 0;
+                 
+                 // Show/hide clear button based on input
+                 if (searchTerm.length > 0) {
+                     $('#clear-search').show();
+                 } else {
+                     $('#clear-search').hide();
+                 }
+                 
+                 $('.product-card').parent().each(function() {
+                     var productText = $(this).text().toLowerCase();
+                     if (productText.indexOf(searchTerm) > -1) {
+                         $(this).show();
+                         visibleCount++;
+                     } else {
+                         $(this).hide();
+                     }
+                 });
+                 
+                 // Update count for search
+                 $('.badge').text(visibleCount + ' products found');
+             });
+             
+             // Clear search functionality
+             $('#clear-search').on('click', function() {
+                 $('#product-search').val('');
+                 $('#clear-search').hide();
+                 
+                 // Show all products
+                 $('.product-card').parent().show();
+                 
+                 // Reset to current filter count
+                 var activeFilter = $('.filter-btn.active').attr('data-filter');
+                 updateProductCount(activeFilter);
              });
 
              // Hide preloader when page is loaded
@@ -929,6 +1406,16 @@
                          $(this).addClass('animate__animated animate__fadeInUp');
                      }
                  });
+             });
+
+             // Add loading animation for filter buttons
+             $('.filter-btn').on('click', function() {
+                 var $btn = $(this);
+                 $btn.addClass('loading');
+                 
+                 setTimeout(function() {
+                     $btn.removeClass('loading');
+                 }, 300);
              });
          });
      </script>
