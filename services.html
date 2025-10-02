@@ -91,6 +91,66 @@
                 text-align: center;
                 margin: 0;
             }
+            .service-gallery-item {
+                position: relative;
+                overflow: hidden;
+                border-radius: 15px;
+                transition: transform 0.3s ease;
+            }
+            .service-gallery-item:hover {
+                transform: translateY(-5px);
+            }
+            .gallery-img {
+                position: relative;
+                overflow: hidden;
+                border-radius: 15px;
+            }
+            .gallery-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(45deg, rgba(238, 206, 56, 0.9), rgba(238, 206, 56, 0.7));
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                border-radius: 15px;
+            }
+            .service-gallery-item:hover .gallery-overlay {
+                opacity: 1;
+            }
+            .gallery-overlay h5 {
+                color: white;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            .gallery-overlay p {
+                color: white;
+                font-size: 14px;
+                text-align: center;
+                margin: 0;
+            }
+            .partner-item {
+                transition: transform 0.3s ease, filter 0.3s ease;
+            }
+            .partner-item:hover {
+                transform: scale(1.1);
+                filter: grayscale(0%) brightness(1.1);
+            }
+            .partner-img img {
+                transition: all 0.3s ease;
+                opacity: 0.8;
+            }
+            .partner-item:hover .partner-img img {
+                opacity: 1;
+                filter: grayscale(0%) brightness(1.1);
+            }
         </style>
     </head>
     <body>
@@ -361,6 +421,58 @@
             </div>
         </section>
         <!--====== End Service Section ======-->
+        
+        <!--====== Start Service Gallery Section ======-->
+        <section class="service-gallery-section p-r z-1 pt-130 pb-130">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center mb-50 wow fadeInUp">
+                            <span class="tag-line">Our Service Gallery</span>
+                            <h2>Manufacturing Excellence in Action</h2>
+                            <p>Explore our state-of-the-art facilities and traditional processes that ensure the highest quality edible oils.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="service-gallery-item mb-30 wow fadeInUp">
+                            <div class="gallery-img">
+                                <img src="https://m.media-amazon.com/images/I/81Q5EIg1a5L.jpg" alt="Traditional Oil Extraction" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="gallery-overlay">
+                                    <h5>Traditional Extraction</h5>
+                                    <p>Time-tested Kolhu methods</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="service-gallery-item mb-30 wow fadeInDown">
+                            <div class="gallery-img">
+                                <img src="https://m.media-amazon.com/images/I/81Q5EIg1a5L._UF350,350_QL80_.jpg" alt="Quality Control Lab" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="gallery-overlay">
+                                    <h5>Quality Control</h5>
+                                    <p>Rigorous testing standards</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="service-gallery-item mb-30 wow fadeInUp">
+                            <div class="gallery-img">
+                                <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/0ba4c099-476a-4401-b9a4-b377a1d688f2.__CR0,0,970,600_PT0_SX970_V1___.png" alt="Modern Manufacturing" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                                <div class="gallery-overlay">
+                                    <h5>Modern Manufacturing</h5>
+                                    <p>State-of-the-art facilities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====== End Service Gallery Section ======-->
+        
         <!--====== Start Skill Section ======-->
         <section class="skill-section-two pt-lg-130">
             <div class="container-fluid">
@@ -420,7 +532,7 @@
                     <div class="col-lg-4">
                         <div class="single-service-item mb-50 wow fadeInUp">
                             <div class="icon">
-                                <img src="assets/images/icon/traditional-icon.png" alt="Traditional Extraction">
+                                <img src="https://m.media-amazon.com/images/I/81Q5EIg1a5L.jpg" alt="Traditional Extraction" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                             </div>
                             <div class="text">
                                 <h3><a href="service-details.html">Traditional Extraction</a></h3>
@@ -429,7 +541,7 @@
                         </div>
                         <div class="single-service-item mb-50 wow fadeInDown">
                             <div class="icon">
-                                <img src="assets/images/icon/filtration-icon.png" alt="Natural Filtration">
+                                <img src="https://m.media-amazon.com/images/I/81Q5EIg1a5L._UF350,350_QL80_.jpg" alt="Natural Filtration" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                             </div>
                             <div class="text">
                                 <h3><a href="service-details.html">Natural Filtration</a></h3>
@@ -438,7 +550,7 @@
                         </div>
                         <div class="single-service-item mb-50 wow fadeInUp">
                             <div class="icon">
-                                <img src="assets/images/icon/quality-icon.png" alt="Quality Control">
+                                <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/0ba4c099-476a-4401-b9a4-b377a1d688f2.__CR0,0,970,600_PT0_SX970_V1___.png" alt="Quality Control" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                             </div>
                             <div class="text">
                                 <h3><a href="service-details.html">Quality Control</a></h3>
@@ -448,13 +560,13 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="img-holder mb-50 wow fadeInDown">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Oil Manufacturing Process" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                            <img src="https://m.media-amazon.com/images/I/81Q5EIg1a5L.jpg" alt="Oil Manufacturing Process" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="single-service-item mb-50 card-rtl wow fadeInDown">
                             <div class="icon">
-                                <img src="assets/images/icon/packaging-icon.png" alt="Advanced Packaging">
+                                <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/04e43dda-759c-472b-8759-b77a082fd5fd.__CR0,0,970,600_PT0_SX970_V1___.jpg" alt="Advanced Packaging" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                             </div>
                             <div class="text">
                                 <h3><a href="service-details.html">Advanced Packaging</a></h3>
@@ -463,7 +575,7 @@
                         </div>
                         <div class="single-service-item mb-50 card-rtl wow fadeInUp">
                             <div class="icon">
-                                <img src="assets/images/icon/distribution-icon.png" alt="Distribution Network">
+                                <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/9b6f3b58-0e49-41b3-b041-2a95c525b2b9.__CR0,0,970,600_PT0_SX970_V1___.jpg" alt="Distribution Network" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                             </div>
                             <div class="text">
                                 <h3><a href="service-details.html">Distribution Network</a></h3>
@@ -472,7 +584,7 @@
                         </div>
                         <div class="single-service-item mb-50 card-rtl wow fadeInDown">
                             <div class="icon">
-                                <img src="assets/images/icon/support-icon.png" alt="Customer Support">
+                                <img src="https://m.media-amazon.com/images/I/81Q5EIg1a5L.jpg" alt="Customer Support" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                             </div>
                             <div class="text">
                                 <h3><a href="service-details.html">Customer Support</a></h3>
@@ -558,34 +670,31 @@
                     <div class="partner-slider-one wow fadeInDown">
                         <div class="partner-item">
                             <div class="partner-img">
-                                <img src="assets/images/partners/amazon.png" alt="Amazon">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnRUKDNec7DyjZ0vusRZIwpYfR6PrfZAAeRw&s" alt="Amazon" style="max-height: 60px; width: auto; filter: grayscale(0%); transition: all 0.3s ease;">
                             </div>
                         </div>
                         <div class="partner-item">
                             <div class="partner-img">
-                                <img src="assets/images/partners/jiomart.png" alt="JioMart">
+                                <img src="https://cdn.couponlap.in/coupons/JioMart-.jpg1709530100074" alt="JioMart" style="max-height: 60px; width: auto; filter: grayscale(0%); transition: all 0.3s ease;">
                             </div>
                         </div>
                         <div class="partner-item">
                             <div class="partner-img">
-                                <img src="assets/images/partners/blinkit.png" alt="Blinkit">
+                                <img src="https://play-lh.googleusercontent.com/kXJYGrvy4pvHwzw6tMgf-KPthnPDg4RvvoOTgffwSuHCUL63WVxaj3ojX3ADBS0UiD0=s256-rw" alt="Blinkit" style="max-height: 60px; width: auto; filter: grayscale(0%); transition: all 0.3s ease;">
                             </div>
                         </div>
                         <div class="partner-item">
                             <div class="partner-img">
-                                <img src="assets/images/partners/metro.png" alt="Metro Wholesale">
+                                <img src="https://download.logo.wine/logo/Metro_AG/Metro_AG-Logo.wine.png" alt="Metro Wholesale" style="max-height: 60px; width: auto; filter: grayscale(0%); transition: all 0.3s ease;">
                             </div>
                         </div>
                         <div class="partner-item">
                             <div class="partner-img">
-                                <img src="assets/images/partners/flipkart.png" alt="Flipkart">
+                                <img src="https://images.yourstory.com/cs/2/220356402d6d11e9aa979329348d4c3e/Flipkartimage1574850126217png?mode=crop&crop=faces&ar=2%3A1&format=auto&w=1920&q=75" alt="Flipkart" style="max-height: 60px; width: auto; filter: grayscale(0%); transition: all 0.3s ease;">
                             </div>
                         </div>
-                        <div class="partner-item">
-                            <div class="partner-img">
-                                <img src="assets/images/partners/grofers.png" alt="Grofers">
-                            </div>
-                        </div>
+                      
+                       
                     </div>
                 </div>
             </div>
@@ -603,11 +712,11 @@
                         </div>
                     <div class="col-lg-4">
                         <div class="cta-button text-center text-lg-right wow fadeInRight">
-                            <a href="contact.html" class="main-btn btn-dark">Contact Us Today</a>
+                            <a href="contact.html" class="main-btn btn-dark text-white">Contact Us Today</a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>˝
         </section>
         <!--====== End CTA Section ======-->
         <!--====== Start Footer ======-->
