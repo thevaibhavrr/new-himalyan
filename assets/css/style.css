@@ -1953,7 +1953,7 @@ button {
   justify-content: flex-end; }
   .about-one_image-box .about-img_one {
     position: absolute;
-    left: 100px;
+    left: 20px;
     top: 0; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .about-one_image-box .about-img_one {
