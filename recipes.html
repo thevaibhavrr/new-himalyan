@@ -197,6 +197,129 @@
                 background: #eece38;
                 color: #000;
             }
+            
+            /* Input with icon styles */
+            .input-with-icon {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+            }
+            
+            .input-icon {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #666;
+                font-size: 16px;
+                z-index: 2;
+                pointer-events: none;
+            }
+            
+            .input-with-icon .form_control {
+                padding-left: 45px;
+                width: 100%;
+            }
+            
+            .input-with-icon .form_control:focus + .input-icon {
+                color: #eece38;
+            }
+            
+            .input-with-icon .form_control:focus {
+                border-color: #eece38;
+                box-shadow: 0 0 0 0.2rem rgba(238, 206, 56, 0.25);
+            }
+            
+            /* Newsletter Button Styling */
+            .newsletter-btn {
+                background: linear-gradient(135deg, #eece38, #ff8f00);
+                color: #000;
+                border: none;
+                padding: 12px 25px;
+                border-radius: 25px;
+                font-weight: 600;
+                font-size: 14px;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+                box-shadow: 0 4px 15px rgba(238, 206, 56, 0.3);
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .newsletter-btn:hover {
+                background: linear-gradient(135deg, #d4b325, #e67e00);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(238, 206, 56, 0.4);
+            }
+            
+            .newsletter-btn:active {
+                transform: translateY(0);
+                box-shadow: 0 2px 10px rgba(238, 206, 56, 0.3);
+            }
+            
+            .newsletter-btn i {
+                font-size: 16px;
+                transition: transform 0.3s ease;
+            }
+            
+            .newsletter-btn:hover i {
+                transform: translateX(2px);
+            }
+            
+            .newsletter-btn span {
+                font-weight: 600;
+                letter-spacing: 0.5px;
+            }
+            
+            /* Button loading animation */
+            .newsletter-btn.loading {
+                pointer-events: none;
+                opacity: 0.8;
+            }
+            
+            .newsletter-btn.loading::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 16px;
+                height: 16px;
+                margin: -8px 0 0 -8px;
+                border: 2px solid transparent;
+                border-top: 2px solid #000;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+            }
+            
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            /* Responsive button design */
+            @media (max-width: 768px) {
+                .newsletter-btn {
+                    padding: 10px 20px;
+                    font-size: 13px;
+                }
+            }
+            
+            /* Banner minimum height */
+            .page-banner {
+                min-height: 600px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            @media (max-width: 768px) {
+                .page-banner {
+                    min-height: 500px;
+                }
+            }
         </style>
     </head>
     <body>
@@ -344,19 +467,6 @@
                 <img src="assets/images/logo/new-logo.png" alt="Bharat Agro Oil Logo" style="max-width: 120px;">
                 <h3>Bharat Agro Oil</h3>
                 <p>Premium Edible Oils Since 1978</p>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10">
-                        <div class="page-title">
-                            <h1>Healthy Recipes</h1>
-                            <ul class="breadcrumbs-link">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="active">Recipes</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section><!--====== End Page-Banner Section ======-->
         <!--====== Start Recipes Introduction Section ======-->
@@ -857,7 +967,7 @@
                                 <i class="fas fa-thermometer-half"></i>
                             </div>
                             <div class="text">
-                                <h4>Right Temperature</h4>
+                                <h4 class="text-white">Right Temperature</h4>
                                 <p>Heat oils to the right temperature before adding ingredients. Each oil has a different smoke point.</p>
                             </div>
                         </div>
@@ -868,7 +978,7 @@
                                 <i class="fas fa-balance-scale"></i>
                             </div>
                             <div class="text">
-                                <h4>Moderate Usage</h4>
+                                <h4 class="text-white">Moderate Usage</h4>
                                 <p>Use oils in moderation. Even healthy oils should be consumed in appropriate quantities.</p>
                             </div>
                         </div>
@@ -879,7 +989,7 @@
                                 <i class="fas fa-sync-alt"></i>
                             </div>
                             <div class="text">
-                                <h4>Oil Rotation</h4>
+                                <h4 class="text-white">Oil Rotation</h4>
                                 <p>Rotate between different oils to get a balance of various fatty acids and nutrients.</p>
                             </div>
                         </div>
@@ -901,8 +1011,14 @@
                         <div class="newsletter-form wow fadeInRight">
                             <form>
                                 <div class="form_group">
-                                    <input type="email" class="form_control" placeholder="Enter your email address" name="email" required>
-                                    <button type="submit" class="newsletter-btn"><i class="far fa-paper-plane"></i></button>
+                                    <div class="input-with-icon">
+                                        <i class="far fa-envelope input-icon"></i>
+                                        <input type="email" class="form_control" placeholder="Enter your email address" name="email" required>
+                                    </div>
+                                    <button type="submit" class="newsletter-btn mt-1">
+                                        <i class="far fa-paper-plane"></i>
+                                        <span>Subscribe</span>
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -1022,12 +1138,18 @@
                                     <div class="row">
                                         <div class="col-lg-5">
                                             <div class="form_group">
-                                                <input type="email" class="form_control" placeholder="Email Address" name="email" required>
+                                                <div class="input-with-icon">
+                                                    <i class="far fa-envelope input-icon"></i>
+                                                    <input type="email" class="form_control" placeholder="Email Address" name="email" required>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form_group">
-                                                <input type="text" class="form_control" placeholder="Phone Number" name="phone" required>
+                                                <div class="input-with-icon">
+                                                    <i class="far fa-phone input-icon"></i>
+                                                    <input type="text" class="form_control" placeholder="Phone Number" name="phone" required>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">

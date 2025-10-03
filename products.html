@@ -19,6 +19,10 @@
              color: white;
              padding: 120px 0 80px;
              text-align: center;
+             min-height: 600px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
          }
         .product-card {
             border: none;
@@ -158,6 +162,14 @@
             #product-grid .col-lg-4,
             #product-grid .col-md-6 {
                 margin-bottom: 20px;
+            }
+        }
+        
+        /* Responsive banner height */
+        @media (max-width: 768px) {
+            .product-hero {
+                min-height: 500px;
+                padding: 80px 0 60px;
             }
         }
         .category-filter {
@@ -493,11 +505,7 @@
     <section class="product-hero">
             <div class="container">
                 <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h1 style="color: white;">Our Premium Edible Oils</h1>
-                    <p class="lead" style="color: white;">Discover our range of pure, natural, and healthy cooking oils crafted with traditional methods and modern technology</p>
-                    <a href="#products" class="main-btn btn-yellow">View Our Products</a>
-            </div>
+                
                     </div>
                 </div>
     </section>
