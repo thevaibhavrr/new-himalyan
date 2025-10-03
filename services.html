@@ -454,6 +454,32 @@
             .footer-default h5 {
                 color: #FFFFFF !important;
             }
+            
+            /* Partner logos - ensure colorful display */
+            .partner-item-two img,
+            .partner-img img {
+                filter: none !important;
+                -webkit-filter: none !important;
+                opacity: 1 !important;
+                transition: all 0.3s ease;
+            }
+            
+            .partner-item-two:hover img,
+            .partner-img:hover img {
+                transform: scale(1.05);
+                filter: none !important;
+                -webkit-filter: none !important;
+            }
+            
+            /* Remove any grayscale or black/white filters */
+            .partner-slider-one img,
+            .partner-item-two img,
+            .partner-img img {
+                filter: grayscale(0%) !important;
+                -webkit-filter: grayscale(0%) !important;
+                filter: brightness(1) !important;
+                -webkit-filter: brightness(1) !important;
+            }
         </style>
     </head>
     <body>
