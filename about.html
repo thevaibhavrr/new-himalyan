@@ -375,6 +375,85 @@
         .footer-default h5 {
             color: #FFFFFF !important;
         }
+        
+        /* Fix manufacturing facility section alignment */
+        .about-four_image-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        .about-four_image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .about-content-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        .facility-features {
+            margin-top: 20px;
+        }
+        
+        .feature-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(238, 206, 56, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #eece38;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(238, 206, 56, 0.2);
+        }
+        
+        .feature-item i {
+            font-size: 24px;
+            color: #eece38;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .feature-item strong {
+            color: #eece38;
+            font-weight: 600;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .feature-item span {
+            color: #ffffff;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* Responsive alignment */
+        @media (max-width: 768px) {
+            .about-four_image-box {
+                margin-bottom: 30px;
+            }
+            
+            .about-content-box {
+                text-align: center;
+            }
+            
+            .facility-features .row {
+                text-align: left;
+            }
+        }
     </style>
 </head>
 
@@ -1139,22 +1218,26 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="feature-item mb-3">
-                                        <i class="fas fa-industry text-warning"></i>
-                                        <strong>Production Capacity:</strong> 2000 MT/month
+                                        <i class="fas fa-industry"></i>
+                                        <strong>Production Capacity</strong>
+                                        <span>2000 MT/month</span>
                                     </div>
                                     <div class="feature-item mb-3">
-                                        <i class="fas fa-cogs text-warning"></i>
-                                        <strong>Traditional Kolhu:</strong> Pure extraction
+                                        <i class="fas fa-cogs"></i>
+                                        <strong>Traditional Kolhu</strong>
+                                        <span>Pure extraction</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="feature-item mb-3">
-                                        <i class="fas fa-filter text-warning"></i>
-                                        <strong>Natural Filtration:</strong> No chemical refining
+                                        <i class="fas fa-filter"></i>
+                                        <strong>Natural Filtration</strong>
+                                        <span>No chemical refining</span>
                                     </div>
                                     <div class="feature-item mb-3">
-                                        <i class="fas fa-award text-warning"></i>
-                                        <strong>Certification:</strong> FSSAI Licensed
+                                        <i class="fas fa-award"></i>
+                                        <strong>Certification</strong>
+                                        <span>FSSAI Licensed</span>
                                     </div>
                                 </div>
                             </div>
