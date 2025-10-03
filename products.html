@@ -1237,8 +1237,8 @@
                  
                  var filterValue = $(this).attr('data-filter');
                  
-                 // Get all product cards
-                 var $products = $('.product-card').parent();
+                 // Get all product containers (col-lg-4 elements with data-category)
+                 var $products = $('[data-category]');
                  
                  if(filterValue == 'all') {
                      // Show all products with animation
@@ -1248,9 +1248,7 @@
                      $products.hide();
                      
                      // Show only products matching the filter
-                     $products.filter(function() {
-                         return $(this).find('[data-category="' + filterValue + '"]').length > 0;
-                     }).fadeIn(500);
+                     $products.filter('[data-category="' + filterValue + '"]').fadeIn(500);
                  }
                  
                  // Update product count
@@ -1261,9 +1259,9 @@
              function updateProductCount(filterValue) {
                  var visibleCount = 0;
                  if (filterValue == 'all') {
-                     visibleCount = $('.product-card').parent().length;
+                     visibleCount = $('[data-category]').length;
                  } else {
-                     visibleCount = $('[data-category="' + filterValue + '"]').parent().length;
+                     visibleCount = $('[data-category="' + filterValue + '"]').length;
                  }
                  
                  // Update count display
@@ -1298,7 +1296,11 @@
                      $('#clear-search').hide();
                  }
                  
-                 $('.product-card').parent().each(function() {
+                 // Get current active filter
+                 var activeFilter = $('.filter-btn.active').attr('data-filter');
+                 var $productsToSearch = activeFilter === 'all' ? $('[data-category]') : $('[data-category="' + activeFilter + '"]');
+                 
+                 $productsToSearch.each(function() {
                      var productText = $(this).text().toLowerCase();
                      if (productText.indexOf(searchTerm) > -1) {
                          $(this).show();
@@ -1317,11 +1319,16 @@
                  $('#product-search').val('');
                  $('#clear-search').hide();
                  
-                 // Show all products
-                 $('.product-card').parent().show();
+                 // Get current active filter and show appropriate products
+                 var activeFilter = $('.filter-btn.active').attr('data-filter');
+                 if (activeFilter === 'all') {
+                     $('[data-category]').show();
+                 } else {
+                     $('[data-category]').hide();
+                     $('[data-category="' + activeFilter + '"]').show();
+                 }
                  
                  // Reset to current filter count
-                 var activeFilter = $('.filter-btn.active').attr('data-filter');
                  updateProductCount(activeFilter);
              });
 
